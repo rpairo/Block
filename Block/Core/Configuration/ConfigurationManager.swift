@@ -9,8 +9,8 @@ import Foundation
 
 struct ConfigurationManager {
     // MARK: Functionality
-    func value<T>(from: String) -> T? where T: Decodable {
-        let bundle = Bundle.main.url(forResource: from, withExtension: "plist")!
+    func build<T>() -> T? where T: Decodable {
+        let bundle = Bundle.main.url(forResource: String(describing: T.self), withExtension: "plist")!
         guard let data = try? Data(contentsOf: bundle) else {
             return nil
         }

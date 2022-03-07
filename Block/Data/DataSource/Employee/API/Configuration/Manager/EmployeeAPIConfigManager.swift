@@ -11,8 +11,7 @@ struct EmployeeAPIConfigManager: APIConfigurable {
     // MARK: Functionality
     func buildUrl(for endpoint: EmployeeAPIEndpoints) -> URL? {
         let configManager = ConfigurationManager()
-
-        guard let config: EmployeeAPIConfiguration = configManager.value(from: "EmployeeAPIConfiguration") else {
+        guard let config: EmployeeAPIConfiguration = configManager.build() else {
             return nil
         }
 
