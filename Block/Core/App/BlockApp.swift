@@ -11,7 +11,15 @@ import SwiftUI
 struct BlockApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EmployeeListView(
+                viewModel: ListViewModel(
+                    fetchEmployeeUseCase: FetchEmployeesUseCase(
+                        repository: EmployeeRepository(
+                            dataSource: EmployeeAPIDataSource()
+                        )
+                    )
+                )
+            )
         }
     }
 }
