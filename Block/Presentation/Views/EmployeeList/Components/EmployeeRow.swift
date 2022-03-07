@@ -11,11 +11,23 @@ struct EmployeeRow: View {
     // MARK: Properties
     let employee: Employee
 
-    // MARK: View
+    // MARK: Views
     var body: some View {
         HStack {
-            Text(employee.name)
-            Text(employee.id)
+            photo
+            description
+                .padding(.horizontal)
         }
+    }
+
+    var photo: some View {
+        EmployeeSmallPhoto(photoURL: employee.smallPhoto)
+    }
+
+    var description: some View {
+        EmployeeDescription(
+            name: employee.name,
+            biography: employee.biography
+        )
     }
 }
