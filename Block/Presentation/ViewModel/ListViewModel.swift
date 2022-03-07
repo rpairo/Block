@@ -22,16 +22,16 @@ class ListViewModel: ObservableObject {
 
     // MARK: Lifecycle
     func onAppear() {
-        self.fetchEmployeeUseCase.execute { result in
+        self.fetchEmployeeUseCase.execute { [weak self] result in
             switch result {
             case .failure(let error):
                 DispatchQueue.main.async {
-                    self.error = error
+                    self?.error = error
                 }
             case .success(let employees):
                 DispatchQueue.main.async {
-                    self.employees = employees
-                    self.error = nil
+                    self?.employees = employees
+                    self?.error = nil
                 }
             }
         }
