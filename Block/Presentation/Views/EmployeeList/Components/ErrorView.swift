@@ -24,8 +24,8 @@ struct ErrorView: View {
             ErrorLabel(title: "Data error")
         case .statusCode:
             ErrorLabel(title: "Status code error")
-        case .unkown(let error):
-            ErrorLabel(title: error.localizedDescription)
+        case .unkown:
+            ErrorLabel(title: "Unkown error")
         }
     }
 }

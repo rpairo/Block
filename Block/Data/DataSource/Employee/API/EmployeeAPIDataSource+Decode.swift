@@ -33,8 +33,8 @@ extension EmployeeAPIDataSource {
     }
 
     func checkErrors(_ response: URLResponse?, _ error: Error?) -> FetchEmployeeError? {
-        if let error = error {
-            return .unkown(error)
+        guard error == nil else {
+            return .unkown
         }
 
         if let code = (response as? HTTPURLResponse)?.statusCode, code != 200 {

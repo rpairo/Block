@@ -14,7 +14,20 @@ enum FetchEmployeeError: Error {
     case statusCode(Int)
     case decoding
     case emptyList
-    case unkown(Error)
+    case unkown
+}
+
+extension FetchEmployeeError: Equatable {
+    static func == (lhs: FetchEmployeeError, rhs: FetchEmployeeError) -> Bool {
+        switch (lhs, rhs) {
+        case (url, url), (data, data), (decoding, decoding), (emptyList, emptyList), (unkown, unkown):
+            return true
+        case (statusCode(let lhsCode), statusCode(let rhsCode)):
+            return lhsCode ==  rhsCode
+        default:
+            return false
+        }
+    }
 }
 
 // MARK: Result
