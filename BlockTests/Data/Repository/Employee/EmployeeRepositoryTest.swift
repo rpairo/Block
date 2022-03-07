@@ -1,5 +1,5 @@
 //
-//  EmployeeAPIDataSourceTest.swift
+//  EmployeeRepositoryTest.swift
 //  BlockTests
 //
 //  Created by Raúl Pera Pairó on 7/3/22.
@@ -8,26 +8,26 @@
 import XCTest
 @testable import Block
 
-class EmployeeAPIDataSourceTest: XCTestCase {
+class EmployeeRepositoryTest: XCTestCase {
     // MARK: Properties
-    var dataSource: EmployeeDataSourceable?
+    var repository: EmployeeRepositable?
 
     // MARK: Lifecycle
     override func tearDown() {
-        self.dataSource = nil
+        self.repository = nil
     }
 
     // MARK: Tests
-    func testDataSourceEmptyList() {
+    func testRepositoryEmptyList() {
         // Expectation
         let expectation = self.expectation(description: #function)
 
         // Mock
-        let config = EmployeeAPIConfigManagerEmptyMock()
+        let dataSource = EmployeeAPIDataSourceEmptyMock()
 
         // SUT
-        self.dataSource = EmployeeAPIDataSource(configuration: config)
-        self.dataSource?.fetch { result in
+        self.repository = EmployeeRepository(dataSource: dataSource)
+        self.repository?.fetch { result in
             switch result {
             case .success:
                 XCTFail("This test have to return only a error")
@@ -42,16 +42,16 @@ class EmployeeAPIDataSourceTest: XCTestCase {
         wait(for: [expectation], timeout: 5)
     }
 
-    func testDataSourceMalformedList() {
+    func testRepositoryMalformedList() {
         // Expectation
         let expectation = self.expectation(description: #function)
 
         // Mock
-        let config = EmployeeAPIConfigManagerMalformedMock()
+        let dataSource = EmployeeAPIDataSourceMalformedMock()
 
         // SUT
-        self.dataSource = EmployeeAPIDataSource(configuration: config)
-        self.dataSource?.fetch { result in
+        self.repository = EmployeeRepository(dataSource: dataSource)
+        self.repository?.fetch { result in
             switch result {
             case .success:
                 XCTFail("This test have to return only a error")
@@ -66,16 +66,16 @@ class EmployeeAPIDataSourceTest: XCTestCase {
         wait(for: [expectation], timeout: 5)
     }
 
-    func testDataSourceNoURL() {
+    func testRepositoryNoURL() {
         // Expectation
         let expectation = self.expectation(description: #function)
 
         // Mock
-        let config = EmployeeAPIConfigManagerNoURLMock()
+        let dataSource = EmployeeAPIDataSourceNoURLMock()
 
         // SUT
-        self.dataSource = EmployeeAPIDataSource(configuration: config)
-        self.dataSource?.fetch { result in
+        self.repository = EmployeeRepository(dataSource: dataSource)
+        self.repository?.fetch { result in
             switch result {
             case .success:
                 XCTFail("This test have to return only a error")
@@ -90,16 +90,16 @@ class EmployeeAPIDataSourceTest: XCTestCase {
         wait(for: [expectation], timeout: 5)
     }
 
-    func testDataSourceBadURL() {
+    func testRepositoryBadURL() {
         // Expectation
         let expectation = self.expectation(description: #function)
 
         // Mock
-        let config = EmployeeAPIConfigManagerBadURLMock()
+        let dataSource = EmployeeAPIDataSourceBadURLMock()
 
         // SUT
-        self.dataSource = EmployeeAPIDataSource(configuration: config)
-        self.dataSource?.fetch { result in
+        self.repository = EmployeeRepository(dataSource: dataSource)
+        self.repository?.fetch { result in
             switch result {
             case .success:
                 XCTFail("This test have to return only a error")
@@ -114,16 +114,16 @@ class EmployeeAPIDataSourceTest: XCTestCase {
         wait(for: [expectation], timeout: 5)
     }
 
-    func testDataSourceMalformedURL() {
+    func testRepositoryMalformedURL() {
         // Expectation
         let expectation = self.expectation(description: #function)
 
         // Mock
-        let config = EmployeeAPIConfigManagerMalformedURLMock()
+        let dataSource = EmployeeAPIDataSourceMalformedURLMock()
 
         // SUT
-        self.dataSource = EmployeeAPIDataSource(configuration: config)
-        self.dataSource?.fetch { result in
+        self.repository = EmployeeRepository(dataSource: dataSource)
+        self.repository?.fetch { result in
             switch result {
             case .success:
                 XCTFail("This test have to return only a error")
@@ -138,16 +138,16 @@ class EmployeeAPIDataSourceTest: XCTestCase {
         wait(for: [expectation], timeout: 5)
     }
 
-    func testDataSourceSuccess() {
+    func testRepositorySuccess() {
         // Expectation
         let expectation = self.expectation(description: #function)
 
         // Mock
-        let config = EmployeeAPIConfigManagerSuccessMock()
+        let dataSource = EmployeeAPIDataSourceSuccessMock()
 
         // SUT
-        self.dataSource = EmployeeAPIDataSource(configuration: config)
-        self.dataSource?.fetch { result in
+        self.repository = EmployeeRepository(dataSource: dataSource)
+        self.repository?.fetch { result in
             switch result {
             case .success(let employees):
                 DispatchQueue.main.async {
