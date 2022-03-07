@@ -8,9 +8,12 @@
 import Foundation
 
 struct EmployeeAPIDataSource: EmployeeDataSourceable {
+    // MARK: Properties
+    let configuration: APIConfigurable
+
     // MARK: Functionality
     func fetch(onComplete: @escaping FetchEmployeeResult) {
-        guard let url = buildURL(endpoint: .employees) else {
+        guard let url = configuration.buildUrl(for: .employees) else {
             onComplete(.failure(.url))
             return
         }

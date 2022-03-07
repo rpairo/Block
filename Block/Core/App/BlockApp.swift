@@ -15,7 +15,9 @@ struct BlockApp: App {
                 viewModel: ListViewModel(
                     fetchEmployeeUseCase: FetchEmployeesUseCase(
                         repository: EmployeeRepository(
-                            dataSource: EmployeeAPIDataSource()
+                            dataSource: EmployeeAPIDataSource(
+                                configuration: EmployeeAPIConfigManager()
+                            )
                         )
                     )
                 )
