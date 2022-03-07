@@ -13,16 +13,96 @@ class EmployeeAPIDataSourceTest: XCTestCase {
     var dataSource: EmployeeDataSourceable?
 
     // MARK: Lifecycle
-    override func setUp() {
-        self.dataSource = EmployeeAPIDataSource()
-    }
-
     override func tearDown() {
         self.dataSource = nil
     }
 
     // MARK: Tests
     func testEmptyList() {
+        // Expectation
+        let expectation = XCTestExpectation(description: #function)
 
+        // Mock
+        let config = EmployeeAPIConfigManagerEmptyMock()
+
+        // SUT
+        self.dataSource = EmployeeAPIDataSource(configuration: config)
+        self.dataSource?.fetch { result in
+            switch result {
+            case .success:
+                XCTFail("This test have to return only a error")
+            case .failure(let error):
+                expectation.fulfill()
+                XCTAssertEqual(error, .emptyList)
+            }
+        }
+
+        wait(for: [expectation], timeout: 5)
+    }
+
+    func testMalformedList() {
+        // Expectation
+        let expectation = XCTestExpectation(description: #function)
+
+        // Mock
+        let config = EmployeeAPIConfigManagerMalformedMock()
+
+        // SUT
+        self.dataSource = EmployeeAPIDataSource(configuration: config)
+        self.dataSource?.fetch { result in
+            switch result {
+            case .success:
+                XCTFail("This test have to return only a error")
+            case .failure(let error):
+                expectation.fulfill()
+                XCTAssertEqual(error, .decoding)
+            }
+        }
+
+        wait(for: [expectation], timeout: 5)
+    }
+
+    func testNoURL() {
+        // Expectation
+        let expectation = XCTestExpectation(description: #function)
+
+        // Mock
+        let config = EmployeeAPIConfigManagerNoURLMock()
+
+        // SUT
+        self.dataSource = EmployeeAPIDataSource(configuration: config)
+        self.dataSource?.fetch { result in
+            switch result {
+            case .success:
+                XCTFail("This test have to return only a error")
+            case .failure(let error):
+                expectation.fulfill()
+                XCTAssertEqual(error, .url)
+            }
+        }
+
+        wait(for: [expectation], timeout: 5)
+    }
+
+    func testBadURL() {
+        // Expectation
+        let expectation = XCTestExpectation(description: #function)
+
+        // Mock
+        let config = EmployeeAPIConfigManagerBadURLMock()
+
+        // SUT
+        self.dataSource = EmployeeAPIDataSource(configuration: config)
+        self.dataSource?.fetch { result in
+            switch result {
+            case .success:
+                XCTFail("This test have to return only a error")
+            case .failure(let error):
+                expectation.fulfill()
+                XCTAssertEqual(error, .unkown)
+            }
+        }
+
+        wait(for: [expectation], timeout: 5)
     }
 }
