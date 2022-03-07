@@ -33,7 +33,9 @@ class EmployeeAPIDataSourceTest: XCTestCase {
                 XCTFail("This test have to return only a error")
             case .failure(let error):
                 expectation.fulfill()
-                XCTAssertEqual(error, .emptyList)
+                DispatchQueue.main.async {
+                    XCTAssertEqual(error, .emptyList)
+                }
             }
         }
 
@@ -55,7 +57,9 @@ class EmployeeAPIDataSourceTest: XCTestCase {
                 XCTFail("This test have to return only a error")
             case .failure(let error):
                 expectation.fulfill()
-                XCTAssertEqual(error, .decoding)
+                DispatchQueue.main.async {
+                    XCTAssertEqual(error, .decoding)
+                }
             }
         }
 
@@ -77,7 +81,9 @@ class EmployeeAPIDataSourceTest: XCTestCase {
                 XCTFail("This test have to return only a error")
             case .failure(let error):
                 expectation.fulfill()
-                XCTAssertEqual(error, .url)
+                DispatchQueue.main.async {
+                    XCTAssertEqual(error, .url)
+                }
             }
         }
 
@@ -99,7 +105,33 @@ class EmployeeAPIDataSourceTest: XCTestCase {
                 XCTFail("This test have to return only a error")
             case .failure(let error):
                 expectation.fulfill()
-                XCTAssertEqual(error, .unkown)
+                DispatchQueue.main.async {
+                    XCTAssertEqual(error, .statusCode(404))
+                }
+            }
+        }
+
+        wait(for: [expectation], timeout: 5)
+    }
+
+    func testMalformedURL() {
+        // Expectation
+        let expectation = XCTestExpectation(description: #function)
+
+        // Mock
+        let config = EmployeeAPIConfigManagerMalformedURLMock()
+
+        // SUT
+        self.dataSource = EmployeeAPIDataSource(configuration: config)
+        self.dataSource?.fetch { result in
+            switch result {
+            case .success:
+                XCTFail("This test have to return only a error")
+            case .failure(let error):
+                expectation.fulfill()
+                DispatchQueue.main.async {
+                    XCTAssertEqual(error, .unkown)
+                }
             }
         }
 

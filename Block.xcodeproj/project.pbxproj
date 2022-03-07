@@ -35,6 +35,7 @@
 		C4A632DF27D59DB200DA0504 /* EmployeeAPIDataSource+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A632DE27D59DB200DA0504 /* EmployeeAPIDataSource+Decode.swift */; };
 		C4A632F827D63A4700DA0504 /* EmployeeAPIDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A632F727D63A4700DA0504 /* EmployeeAPIDataSourceTest.swift */; };
 		C4A632FC27D6479300DA0504 /* EmployeeAPIConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A632FB27D6479300DA0504 /* EmployeeAPIConfigManager.swift */; };
+		C4BEE42C27D689E000177FB9 /* EmployeeAPIConfigManagerMalformedURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BEE42B27D689E000177FB9 /* EmployeeAPIConfigManagerMalformedURLMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		C4A632E627D6389800DA0504 /* BlockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A632F727D63A4700DA0504 /* EmployeeAPIDataSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceTest.swift; sourceTree = "<group>"; };
 		C4A632FB27D6479300DA0504 /* EmployeeAPIConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIConfigManager.swift; sourceTree = "<group>"; };
+		C4BEE42B27D689E000177FB9 /* EmployeeAPIConfigManagerMalformedURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIConfigManagerMalformedURLMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				C485986527D673E8004B4742 /* EmployeeAPIConfigManagerMalformedMock.swift */,
 				C485986727D68115004B4742 /* EmployeeAPIConfigManagerNoURLMock.swift */,
 				C485986927D681A8004B4742 /* EmployeeAPIConfigManagerBadURLMock.swift */,
+				C4BEE42B27D689E000177FB9 /* EmployeeAPIConfigManagerMalformedURLMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -592,6 +595,7 @@
 				C4A632F827D63A4700DA0504 /* EmployeeAPIDataSourceTest.swift in Sources */,
 				C485986A27D681A8004B4742 /* EmployeeAPIConfigManagerBadURLMock.swift in Sources */,
 				C485986827D68115004B4742 /* EmployeeAPIConfigManagerNoURLMock.swift in Sources */,
+				C4BEE42C27D689E000177FB9 /* EmployeeAPIConfigManagerMalformedURLMock.swift in Sources */,
 				C485986627D673E8004B4742 /* EmployeeAPIConfigManagerMalformedMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

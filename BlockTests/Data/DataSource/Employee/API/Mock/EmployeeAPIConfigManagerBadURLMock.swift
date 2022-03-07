@@ -10,6 +10,6 @@ import Foundation
 
 struct EmployeeAPIConfigManagerBadURLMock: APIConfigurable {
     func buildUrl(for endpoint: EmployeeAPIEndpoints) -> URL? {
-        URL(string: "abcde")
+        URL(string: "https://s3.amazonaws.com/sq-mobile-interview-bad-url")
     }
 }
