@@ -22,6 +22,15 @@ class ListViewModel: ObservableObject {
 
     // MARK: Lifecycle
     func onAppear() {
+        fetchEmployees()
+    }
+
+    func onRefresh() {
+        fetchEmployees()
+    }
+
+    // MARK: Functionality
+    private func fetchEmployees() {
         self.fetchEmployeeUseCase.execute { [weak self] result in
             switch result {
             case .failure(let error):
