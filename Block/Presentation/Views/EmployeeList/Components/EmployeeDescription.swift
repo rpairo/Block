@@ -10,16 +10,21 @@ import SwiftUI
 struct EmployeeDescription: View {
     // MARK: Properties
     let name: String
+    let team: String
     let biography: String
 
     // MARK: View
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 3) {
             Text(name)
-                .font(.title2)
+                .font(.headline)
+
+            Text(team)
+                .font(.footnote)
+                .foregroundColor(.gray)
 
             Text(biography)
-                .font(.footnote)
+                .font(.caption)
                 .foregroundColor(.gray)
         }
     }
