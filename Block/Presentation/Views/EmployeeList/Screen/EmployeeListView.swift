@@ -10,13 +10,8 @@ import SwiftUI
 struct EmployeeListView: View {
     // MARK: Properties
     @StateObject var viewModel: EmployeeListViewModel
-    @State private var searchText = ""
-
-    private var searchResults: [Employee] {
-        searchText.isEmpty ?
-        viewModel.employees :
-        viewModel.employees.filter { $0.name.contains(searchText) }
-    }
+    @State private var searchedText = ""
+    @State private var employees = [Employee]()
 
     // MARK: Views
     var body: some View {
@@ -25,19 +20,28 @@ struct EmployeeListView: View {
                 if let error = viewModel.error {
                     ErrorView(error: error)
                 } else {
-                    ListView(employees: searchResults)
+                    ListView(employees: employees)
                 }
             }
+
             .navigationTitle("Employees")
+            .refreshable {
+                viewModel.onRefresh {
+                    employees = viewModel.employees
+                }
+            }
+            .searchable(text: $searchedText)
         }
         .navigationViewStyle(.stack)
         .onAppear {
-            viewModel.onAppear()
+            viewModel.onAppear {
+                employees = viewModel.employees
+            }
         }
-        .refreshable {
-            viewModel.employees.removeAll()
-            viewModel.onRefresh()
+        .onChange(of: searchedText) { searchedText in
+            employees = searchedText.isEmpty ?
+            viewModel.employees :
+            viewModel.employees.filter { $0.name.contains(searchedText) }
         }
-        .searchable(text: $searchText)
     }
 }

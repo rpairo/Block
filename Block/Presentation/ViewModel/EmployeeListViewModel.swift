@@ -21,26 +21,32 @@ class EmployeeListViewModel: ObservableObject {
     }
 
     // MARK: Lifecycle
-    func onAppear() {
-        fetchEmployees()
+    func onAppear(onLoad: @escaping () -> Void) {
+        fetchEmployees { _ in
+            onLoad()
+        }
     }
 
-    func onRefresh() {
-        fetchEmployees()
+    func onRefresh(onRefreshed: @escaping () -> Void) {
+        fetchEmployees { _ in
+            onRefreshed()
+        }
     }
 
     // MARK: Functionality
-    private func fetchEmployees() {
+    func fetchEmployees(onComplete: FetchEmployeeResult? = nil) {
         self.fetchEmployeeUseCase.execute { [weak self] result in
             switch result {
             case .failure(let error):
                 DispatchQueue.main.async {
                     self?.error = error
+                    onComplete?(.failure(error))
                 }
             case .success(let employees):
                 DispatchQueue.main.async {
-                    self?.employees = employees
                     self?.error = nil
+                    self?.employees = employees
+                    onComplete?(.success(employees))
                 }
             }
         }
