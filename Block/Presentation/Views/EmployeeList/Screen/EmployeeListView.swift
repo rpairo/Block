@@ -10,34 +10,45 @@ import SwiftUI
 struct EmployeeListView: View {
     // MARK: Properties
     @StateObject var viewModel: EmployeeListViewModel
-    @State private var searchText = ""
-
-    private var searchResults: [Employee] {
-        searchText.isEmpty ?
-        viewModel.employees :
-        viewModel.employees.filter { $0.name.contains(searchText) }
-    }
+    @State private var searchedText = "" 
+    @State private var employees = [Employee]()
 
     // MARK: Views
     var body: some View {
         NavigationView {
-            VStack {
-                if let error = viewModel.error {
-                    ErrorView(error: error)
-                } else {
-                    ListView(employees: searchResults)
+            switch viewModel.state {
+            case .idle:
+                EmptyView()
+            case .error(let error):
+                ErrorView(error: error)
+            case .loading:
+                VStack(alignment: .center) {
+                    ProgressView()
+                        .padding()
+                    Text("Loading employees")
                 }
+            case .loaded:
+                ListView(employees: employees)
+                    .ignoresSafeArea(.keyboard)
+                    .navigationTitle("Employees")
+                    .searchable(text: $searchedText)
+                    .refreshable {
+                        viewModel.onRefresh {
+                            self.employees = viewModel.employees
+                        }
+                    }
             }
-            .navigationTitle("Employees")
         }
         .navigationViewStyle(.stack)
         .onAppear {
-            viewModel.onAppear()
+            viewModel.onAppear {
+                self.employees = viewModel.employees
+            }
         }
-        .refreshable {
-            viewModel.employees.removeAll()
-            viewModel.onRefresh()
+        .onChange(of: searchedText) { searchedText in
+            employees = searchedText.isEmpty ?
+            viewModel.employees :
+            viewModel.employees.filter { $0.name.contains(searchedText) }
         }
-        .searchable(text: $searchText)
     }
 }

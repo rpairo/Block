@@ -7,13 +7,20 @@
 
 import Foundation
 
+enum EmployeListState: Equatable {
+    case idle
+    case loading
+    case loaded
+    case error(FetchEmployeeError)
+}
+
 class EmployeeListViewModel: ObservableObject {
     // MARK: Properties
+    @Published var state: EmployeListState = .idle
     @Published var employees = [Employee]()
-    @Published var error: FetchEmployeeError?
 
     // MARK: Use cases
-    let fetchEmployeeUseCase: FetchEmployeeUseCaseable
+    private let fetchEmployeeUseCase: FetchEmployeeUseCaseable
 
     // MARK: Constructor
     init(fetchEmployeeUseCase: FetchEmployeeUseCaseable) {
@@ -21,26 +28,33 @@ class EmployeeListViewModel: ObservableObject {
     }
 
     // MARK: Lifecycle
-    func onAppear() {
-        fetchEmployees()
+    func onAppear(onLoad: @escaping () -> Void) {
+        self.state = .loading
+        fetchEmployees { _ in
+            onLoad()
+        }
     }
 
-    func onRefresh() {
-        fetchEmployees()
+    func onRefresh(onRefreshed: @escaping () -> Void) {
+        fetchEmployees { _ in
+            onRefreshed()
+        }
     }
 
     // MARK: Functionality
-    private func fetchEmployees() {
+    func fetchEmployees(onComplete: FetchEmployeeResult? = nil) {
         self.fetchEmployeeUseCase.execute { [weak self] result in
             switch result {
             case .failure(let error):
                 DispatchQueue.main.async {
-                    self?.error = error
+                    self?.state = .error(error)
+                    onComplete?(.failure(error))
                 }
             case .success(let employees):
                 DispatchQueue.main.async {
                     self?.employees = employees
-                    self?.error = nil
+                    self?.state = .loaded
+                    onComplete?(.success(employees))
                 }
             }
         }

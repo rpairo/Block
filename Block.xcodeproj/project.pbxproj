@@ -8,6 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		C41AA15C27D70CB900C0EDFE /* CacheAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA15B27D70CB900C0EDFE /* CacheAsyncImage.swift */; };
+		C41AA16127D7229E00C0EDFE /* FetchEmployeesUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA16027D7229E00C0EDFE /* FetchEmployeesUseCaseTest.swift */; };
+		C41AA16427D7237F00C0EDFE /* EmployeeRepositoryEmptyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA16327D7237F00C0EDFE /* EmployeeRepositoryEmptyMock.swift */; };
+		C41AA16627D7250400C0EDFE /* EmployeeRepositoryMalformedMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA16527D7250400C0EDFE /* EmployeeRepositoryMalformedMock.swift */; };
+		C41AA16827D725A700C0EDFE /* EmployeeRepositoryNoURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA16727D725A700C0EDFE /* EmployeeRepositoryNoURLMock.swift */; };
+		C41AA16A27D7260500C0EDFE /* EmployeeRepositoryBadURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA16927D7260500C0EDFE /* EmployeeRepositoryBadURLMock.swift */; };
+		C41AA16C27D7269000C0EDFE /* EmployeeRepositoryMalformedURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA16B27D7269000C0EDFE /* EmployeeRepositoryMalformedURLMock.swift */; };
+		C41AA16E27D726F000C0EDFE /* EmployeeRepositorySuccessMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA16D27D726F000C0EDFE /* EmployeeRepositorySuccessMock.swift */; };
+		C41AA17227D728B200C0EDFE /* EmployeeListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA17127D728B200C0EDFE /* EmployeeListViewModelTest.swift */; };
+		C41AA17527D7293D00C0EDFE /* EmployeeUseCaseEmptyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA17427D7293D00C0EDFE /* EmployeeUseCaseEmptyMock.swift */; };
+		C41AA17727D7A13700C0EDFE /* EmployeeUseCaseMalformedMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA17627D7A13700C0EDFE /* EmployeeUseCaseMalformedMock.swift */; };
+		C41AA17927D7A1FB00C0EDFE /* EmployeeUseCaseNoURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA17827D7A1FB00C0EDFE /* EmployeeUseCaseNoURLMock.swift */; };
+		C41AA17B27D7A24D00C0EDFE /* EmployeeUseCaseBadURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA17A27D7A24D00C0EDFE /* EmployeeUseCaseBadURLMock.swift */; };
+		C41AA17D27D7A29800C0EDFE /* EmployeeUseCaseMalformedURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA17C27D7A29800C0EDFE /* EmployeeUseCaseMalformedURLMock.swift */; };
+		C41AA17F27D7A2EA00C0EDFE /* EmployeeUseCaseSuccessMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA17E27D7A2EA00C0EDFE /* EmployeeUseCaseSuccessMock.swift */; };
+		C41AA18227D7A8B100C0EDFE /* ConfigurationManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA18127D7A8B100C0EDFE /* ConfigurationManagerTest.swift */; };
+		C41AA18527D7A98F00C0EDFE /* ConfigurationSuccessMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA18427D7A98F00C0EDFE /* ConfigurationSuccessMock.swift */; };
+		C41AA18727D7AC5400C0EDFE /* ConfigurationSuccessMock.plist in Resources */ = {isa = PBXBuildFile; fileRef = C41AA18627D7AC5400C0EDFE /* ConfigurationSuccessMock.plist */; };
+		C41AA18A27D7B19500C0EDFE /* ConfigurationFailureMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA18927D7B19500C0EDFE /* ConfigurationFailureMock.swift */; };
 		C42DCC6E27D6A03A00F1CEDB /* EmployeeAPIDataSourceNoURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DCC6D27D6A03A00F1CEDB /* EmployeeAPIDataSourceNoURLMock.swift */; };
 		C42DCC7027D6A08300F1CEDB /* EmployeeAPIDataSourceBadURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DCC6F27D6A08300F1CEDB /* EmployeeAPIDataSourceBadURLMock.swift */; };
 		C42DCC7227D6A0BD00F1CEDB /* EmployeeAPIDataSourceMalformedURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DCC7127D6A0BD00F1CEDB /* EmployeeAPIDataSourceMalformedURLMock.swift */; };
@@ -61,6 +79,24 @@
 
 /* Begin PBXFileReference section */
 		C41AA15B27D70CB900C0EDFE /* CacheAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheAsyncImage.swift; sourceTree = "<group>"; };
+		C41AA16027D7229E00C0EDFE /* FetchEmployeesUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchEmployeesUseCaseTest.swift; sourceTree = "<group>"; };
+		C41AA16327D7237F00C0EDFE /* EmployeeRepositoryEmptyMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRepositoryEmptyMock.swift; sourceTree = "<group>"; };
+		C41AA16527D7250400C0EDFE /* EmployeeRepositoryMalformedMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRepositoryMalformedMock.swift; sourceTree = "<group>"; };
+		C41AA16727D725A700C0EDFE /* EmployeeRepositoryNoURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRepositoryNoURLMock.swift; sourceTree = "<group>"; };
+		C41AA16927D7260500C0EDFE /* EmployeeRepositoryBadURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRepositoryBadURLMock.swift; sourceTree = "<group>"; };
+		C41AA16B27D7269000C0EDFE /* EmployeeRepositoryMalformedURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRepositoryMalformedURLMock.swift; sourceTree = "<group>"; };
+		C41AA16D27D726F000C0EDFE /* EmployeeRepositorySuccessMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRepositorySuccessMock.swift; sourceTree = "<group>"; };
+		C41AA17127D728B200C0EDFE /* EmployeeListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewModelTest.swift; sourceTree = "<group>"; };
+		C41AA17427D7293D00C0EDFE /* EmployeeUseCaseEmptyMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeUseCaseEmptyMock.swift; sourceTree = "<group>"; };
+		C41AA17627D7A13700C0EDFE /* EmployeeUseCaseMalformedMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeUseCaseMalformedMock.swift; sourceTree = "<group>"; };
+		C41AA17827D7A1FB00C0EDFE /* EmployeeUseCaseNoURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeUseCaseNoURLMock.swift; sourceTree = "<group>"; };
+		C41AA17A27D7A24D00C0EDFE /* EmployeeUseCaseBadURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeUseCaseBadURLMock.swift; sourceTree = "<group>"; };
+		C41AA17C27D7A29800C0EDFE /* EmployeeUseCaseMalformedURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeUseCaseMalformedURLMock.swift; sourceTree = "<group>"; };
+		C41AA17E27D7A2EA00C0EDFE /* EmployeeUseCaseSuccessMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeUseCaseSuccessMock.swift; sourceTree = "<group>"; };
+		C41AA18127D7A8B100C0EDFE /* ConfigurationManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationManagerTest.swift; sourceTree = "<group>"; };
+		C41AA18427D7A98F00C0EDFE /* ConfigurationSuccessMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationSuccessMock.swift; sourceTree = "<group>"; };
+		C41AA18627D7AC5400C0EDFE /* ConfigurationSuccessMock.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ConfigurationSuccessMock.plist; sourceTree = "<group>"; };
+		C41AA18927D7B19500C0EDFE /* ConfigurationFailureMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationFailureMock.swift; sourceTree = "<group>"; };
 		C42DCC6D27D6A03A00F1CEDB /* EmployeeAPIDataSourceNoURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceNoURLMock.swift; sourceTree = "<group>"; };
 		C42DCC6F27D6A08300F1CEDB /* EmployeeAPIDataSourceBadURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceBadURLMock.swift; sourceTree = "<group>"; };
 		C42DCC7127D6A0BD00F1CEDB /* EmployeeAPIDataSourceMalformedURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceMalformedURLMock.swift; sourceTree = "<group>"; };
@@ -129,6 +165,93 @@
 				C41AA15B27D70CB900C0EDFE /* CacheAsyncImage.swift */,
 			);
 			path = Commons;
+			sourceTree = "<group>";
+		};
+		C41AA15D27D7215B00C0EDFE /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C41AA15E27D7216900C0EDFE /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C41AA15E27D7216900C0EDFE /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				C41AA15F27D7217300C0EDFE /* FetchEmployees */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		C41AA15F27D7217300C0EDFE /* FetchEmployees */ = {
+			isa = PBXGroup;
+			children = (
+				C41AA16227D7235400C0EDFE /* Mock */,
+				C41AA16027D7229E00C0EDFE /* FetchEmployeesUseCaseTest.swift */,
+			);
+			path = FetchEmployees;
+			sourceTree = "<group>";
+		};
+		C41AA16227D7235400C0EDFE /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				C41AA16327D7237F00C0EDFE /* EmployeeRepositoryEmptyMock.swift */,
+				C41AA16527D7250400C0EDFE /* EmployeeRepositoryMalformedMock.swift */,
+				C41AA16727D725A700C0EDFE /* EmployeeRepositoryNoURLMock.swift */,
+				C41AA16927D7260500C0EDFE /* EmployeeRepositoryBadURLMock.swift */,
+				C41AA16B27D7269000C0EDFE /* EmployeeRepositoryMalformedURLMock.swift */,
+				C41AA16D27D726F000C0EDFE /* EmployeeRepositorySuccessMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		C41AA16F27D7287700C0EDFE /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C41AA17027D7288B00C0EDFE /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		C41AA17027D7288B00C0EDFE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C41AA17327D7291D00C0EDFE /* Mock */,
+				C41AA17127D728B200C0EDFE /* EmployeeListViewModelTest.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C41AA17327D7291D00C0EDFE /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				C41AA17427D7293D00C0EDFE /* EmployeeUseCaseEmptyMock.swift */,
+				C41AA17627D7A13700C0EDFE /* EmployeeUseCaseMalformedMock.swift */,
+				C41AA17827D7A1FB00C0EDFE /* EmployeeUseCaseNoURLMock.swift */,
+				C41AA17A27D7A24D00C0EDFE /* EmployeeUseCaseBadURLMock.swift */,
+				C41AA17C27D7A29800C0EDFE /* EmployeeUseCaseMalformedURLMock.swift */,
+				C41AA17E27D7A2EA00C0EDFE /* EmployeeUseCaseSuccessMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		C41AA18027D7A89600C0EDFE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C41AA18327D7A91D00C0EDFE /* Mock */,
+				C41AA18127D7A8B100C0EDFE /* ConfigurationManagerTest.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C41AA18327D7A91D00C0EDFE /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				C41AA18627D7AC5400C0EDFE /* ConfigurationSuccessMock.plist */,
+				C41AA18427D7A98F00C0EDFE /* ConfigurationSuccessMock.swift */,
+				C41AA18927D7B19500C0EDFE /* ConfigurationFailureMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		C485986227D67286004B4742 /* Mock */ = {
@@ -263,7 +386,7 @@
 		C4A632AA27D3CFA300DA0504 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				C4A632C727D3F98F00DA0504 /* FetchUsers */,
+				C4A632C727D3F98F00DA0504 /* FetchEmployees */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -353,13 +476,13 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		C4A632C727D3F98F00DA0504 /* FetchUsers */ = {
+		C4A632C727D3F98F00DA0504 /* FetchEmployees */ = {
 			isa = PBXGroup;
 			children = (
 				C4A632C527D3F88F00DA0504 /* FetchEmployeeUseCaseable.swift */,
 				C4A632D027D5321D00DA0504 /* FetchEmployeesUseCase.swift */,
 			);
-			path = FetchUsers;
+			path = FetchEmployees;
 			sourceTree = "<group>";
 		};
 		C4A632C827D3FFB200DA0504 /* Configuration */ = {
@@ -413,6 +536,9 @@
 		C4A632E727D6389800DA0504 /* BlockTests */ = {
 			isa = PBXGroup;
 			children = (
+				C41AA18027D7A89600C0EDFE /* Core */,
+				C41AA16F27D7287700C0EDFE /* Presentation */,
+				C41AA15D27D7215B00C0EDFE /* Domain */,
 				C4A632EF27D6399F00DA0504 /* Data */,
 			);
 			path = BlockTests;
@@ -573,6 +699,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C41AA18727D7AC5400C0EDFE /* ConfigurationSuccessMock.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,12 +770,29 @@
 				C4A632F827D63A4700DA0504 /* EmployeeAPIDataSourceTest.swift in Sources */,
 				C4BEE43527D69E3A00177FB9 /* EmployeeAPIDataSourceMalformedMock.swift in Sources */,
 				C42DCC6E27D6A03A00F1CEDB /* EmployeeAPIDataSourceNoURLMock.swift in Sources */,
+				C41AA16127D7229E00C0EDFE /* FetchEmployeesUseCaseTest.swift in Sources */,
 				C485986A27D681A8004B4742 /* EmployeeAPIConfigManagerBadURLMock.swift in Sources */,
+				C41AA17527D7293D00C0EDFE /* EmployeeUseCaseEmptyMock.swift in Sources */,
+				C41AA17B27D7A24D00C0EDFE /* EmployeeUseCaseBadURLMock.swift in Sources */,
+				C41AA16827D725A700C0EDFE /* EmployeeRepositoryNoURLMock.swift in Sources */,
 				C485986827D68115004B4742 /* EmployeeAPIConfigManagerNoURLMock.swift in Sources */,
+				C41AA17927D7A1FB00C0EDFE /* EmployeeUseCaseNoURLMock.swift in Sources */,
+				C41AA17227D728B200C0EDFE /* EmployeeListViewModelTest.swift in Sources */,
 				C4BEE43327D69D3700177FB9 /* EmployeeAPIDataSourceEmptyMock.swift in Sources */,
 				C4BEE42C27D689E000177FB9 /* EmployeeAPIConfigManagerMalformedURLMock.swift in Sources */,
+				C41AA18A27D7B19500C0EDFE /* ConfigurationFailureMock.swift in Sources */,
+				C41AA17F27D7A2EA00C0EDFE /* EmployeeUseCaseSuccessMock.swift in Sources */,
+				C41AA16E27D726F000C0EDFE /* EmployeeRepositorySuccessMock.swift in Sources */,
+				C41AA16A27D7260500C0EDFE /* EmployeeRepositoryBadURLMock.swift in Sources */,
+				C41AA17D27D7A29800C0EDFE /* EmployeeUseCaseMalformedURLMock.swift in Sources */,
+				C41AA16627D7250400C0EDFE /* EmployeeRepositoryMalformedMock.swift in Sources */,
+				C41AA17727D7A13700C0EDFE /* EmployeeUseCaseMalformedMock.swift in Sources */,
 				C485986627D673E8004B4742 /* EmployeeAPIConfigManagerMalformedMock.swift in Sources */,
+				C41AA18227D7A8B100C0EDFE /* ConfigurationManagerTest.swift in Sources */,
+				C41AA18527D7A98F00C0EDFE /* ConfigurationSuccessMock.swift in Sources */,
 				C42DCC7227D6A0BD00F1CEDB /* EmployeeAPIDataSourceMalformedURLMock.swift in Sources */,
+				C41AA16427D7237F00C0EDFE /* EmployeeRepositoryEmptyMock.swift in Sources */,
+				C41AA16C27D7269000C0EDFE /* EmployeeRepositoryMalformedURLMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -792,6 +936,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -803,7 +948,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -820,6 +965,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -831,7 +977,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
