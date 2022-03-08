@@ -12,7 +12,7 @@ struct BlockApp: App {
     var body: some Scene {
         WindowGroup {
             EmployeeListView(
-                viewModel: ListViewModel(
+                viewModel: EmployeeListViewModel(
                     fetchEmployeeUseCase: FetchEmployeesUseCase(
                         repository: EmployeeRepository(
                             dataSource: EmployeeAPIDataSource(

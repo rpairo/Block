@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ListViewModel: ObservableObject {
+class EmployeeListViewModel: ObservableObject {
     // MARK: Properties
     @Published var employees = [Employee]()
     @Published var error: FetchEmployeeError?

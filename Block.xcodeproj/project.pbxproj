@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C41AA15C27D70CB900C0EDFE /* CacheAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA15B27D70CB900C0EDFE /* CacheAsyncImage.swift */; };
 		C42DCC6E27D6A03A00F1CEDB /* EmployeeAPIDataSourceNoURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DCC6D27D6A03A00F1CEDB /* EmployeeAPIDataSourceNoURLMock.swift */; };
 		C42DCC7027D6A08300F1CEDB /* EmployeeAPIDataSourceBadURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DCC6F27D6A08300F1CEDB /* EmployeeAPIDataSourceBadURLMock.swift */; };
 		C42DCC7227D6A0BD00F1CEDB /* EmployeeAPIDataSourceMalformedURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DCC7127D6A0BD00F1CEDB /* EmployeeAPIDataSourceMalformedURLMock.swift */; };
@@ -31,7 +32,7 @@
 		C4A632C627D3F88F00DA0504 /* FetchEmployeeUseCaseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A632C527D3F88F00DA0504 /* FetchEmployeeUseCaseable.swift */; };
 		C4A632CA27D4004200DA0504 /* EmployeeAPIConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4A632C927D4004200DA0504 /* EmployeeAPIConfiguration.plist */; };
 		C4A632CC27D4031D00DA0504 /* EmployeeAPIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A632CB27D4031D00DA0504 /* EmployeeAPIEndpoints.swift */; };
-		C4A632CF27D52D0300DA0504 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A632CE27D52D0300DA0504 /* ListViewModel.swift */; };
+		C4A632CF27D52D0300DA0504 /* EmployeeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A632CE27D52D0300DA0504 /* EmployeeListViewModel.swift */; };
 		C4A632D127D5321D00DA0504 /* FetchEmployeesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A632D027D5321D00DA0504 /* FetchEmployeesUseCase.swift */; };
 		C4A632D527D5807E00DA0504 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A632D427D5807E00DA0504 /* ErrorView.swift */; };
 		C4A632D727D5822600DA0504 /* ErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A632D627D5822600DA0504 /* ErrorLabel.swift */; };
@@ -44,7 +45,7 @@
 		C4BEE43027D69B4F00177FB9 /* EmployeeRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BEE42F27D69B4F00177FB9 /* EmployeeRepositoryTest.swift */; };
 		C4BEE43327D69D3700177FB9 /* EmployeeAPIDataSourceEmptyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BEE43227D69D3700177FB9 /* EmployeeAPIDataSourceEmptyMock.swift */; };
 		C4BEE43527D69E3A00177FB9 /* EmployeeAPIDataSourceMalformedMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BEE43427D69E3A00177FB9 /* EmployeeAPIDataSourceMalformedMock.swift */; };
-		C4F85AFE27D6BF08002AFA5F /* EmployeeSmallPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F85AFD27D6BF08002AFA5F /* EmployeeSmallPhoto.swift */; };
+		C4F85AFE27D6BF08002AFA5F /* EmployeePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F85AFD27D6BF08002AFA5F /* EmployeePhoto.swift */; };
 		C4F85B0027D6C04F002AFA5F /* EmployeeDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F85AFF27D6C04F002AFA5F /* EmployeeDescription.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C41AA15B27D70CB900C0EDFE /* CacheAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheAsyncImage.swift; sourceTree = "<group>"; };
 		C42DCC6D27D6A03A00F1CEDB /* EmployeeAPIDataSourceNoURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceNoURLMock.swift; sourceTree = "<group>"; };
 		C42DCC6F27D6A08300F1CEDB /* EmployeeAPIDataSourceBadURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceBadURLMock.swift; sourceTree = "<group>"; };
 		C42DCC7127D6A0BD00F1CEDB /* EmployeeAPIDataSourceMalformedURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceMalformedURLMock.swift; sourceTree = "<group>"; };
@@ -84,7 +86,7 @@
 		C4A632C527D3F88F00DA0504 /* FetchEmployeeUseCaseable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchEmployeeUseCaseable.swift; sourceTree = "<group>"; };
 		C4A632C927D4004200DA0504 /* EmployeeAPIConfiguration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = EmployeeAPIConfiguration.plist; sourceTree = "<group>"; };
 		C4A632CB27D4031D00DA0504 /* EmployeeAPIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIEndpoints.swift; sourceTree = "<group>"; };
-		C4A632CE27D52D0300DA0504 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		C4A632CE27D52D0300DA0504 /* EmployeeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewModel.swift; sourceTree = "<group>"; };
 		C4A632D027D5321D00DA0504 /* FetchEmployeesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchEmployeesUseCase.swift; sourceTree = "<group>"; };
 		C4A632D427D5807E00DA0504 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		C4A632D627D5822600DA0504 /* ErrorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLabel.swift; sourceTree = "<group>"; };
@@ -98,7 +100,7 @@
 		C4BEE42F27D69B4F00177FB9 /* EmployeeRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRepositoryTest.swift; sourceTree = "<group>"; };
 		C4BEE43227D69D3700177FB9 /* EmployeeAPIDataSourceEmptyMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceEmptyMock.swift; sourceTree = "<group>"; };
 		C4BEE43427D69E3A00177FB9 /* EmployeeAPIDataSourceMalformedMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceMalformedMock.swift; sourceTree = "<group>"; };
-		C4F85AFD27D6BF08002AFA5F /* EmployeeSmallPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSmallPhoto.swift; sourceTree = "<group>"; };
+		C4F85AFD27D6BF08002AFA5F /* EmployeePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeePhoto.swift; sourceTree = "<group>"; };
 		C4F85AFF27D6C04F002AFA5F /* EmployeeDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDescription.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +122,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C41AA15A27D6F58000C0EDFE /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				C4F85AFD27D6BF08002AFA5F /* EmployeePhoto.swift */,
+				C41AA15B27D70CB900C0EDFE /* CacheAsyncImage.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
 		C485986227D67286004B4742 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +271,7 @@
 		C4A632AB27D3CFC100DA0504 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C41AA15A27D6F58000C0EDFE /* Commons */,
 				C4A632D927D5839900DA0504 /* EmployeeList */,
 			);
 			path = Views;
@@ -364,7 +376,7 @@
 		C4A632CD27D52CF300DA0504 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				C4A632CE27D52D0300DA0504 /* ListViewModel.swift */,
+				C4A632CE27D52D0300DA0504 /* EmployeeListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -384,7 +396,6 @@
 				C4A632D627D5822600DA0504 /* ErrorLabel.swift */,
 				C4A632DA27D5855F00DA0504 /* ListView.swift */,
 				C4A632DC27D585EE00DA0504 /* EmployeeRow.swift */,
-				C4F85AFD27D6BF08002AFA5F /* EmployeeSmallPhoto.swift */,
 				C4F85AFF27D6C04F002AFA5F /* EmployeeDescription.swift */,
 			);
 			path = Components;
@@ -598,6 +609,7 @@
 				C4A6329927D3CEE000DA0504 /* EmployeeListView.swift in Sources */,
 				C4A632DB27D5855F00DA0504 /* ListView.swift in Sources */,
 				C4A632B527D3EB0C00DA0504 /* EmployeeRepositable.swift in Sources */,
+				C41AA15C27D70CB900C0EDFE /* CacheAsyncImage.swift in Sources */,
 				C4A632DD27D585EE00DA0504 /* EmployeeRow.swift in Sources */,
 				C4F85B0027D6C04F002AFA5F /* EmployeeDescription.swift in Sources */,
 				C4A6329727D3CEE000DA0504 /* BlockApp.swift in Sources */,
@@ -608,11 +620,11 @@
 				C4A632D727D5822600DA0504 /* ErrorLabel.swift in Sources */,
 				C4A632CC27D4031D00DA0504 /* EmployeeAPIEndpoints.swift in Sources */,
 				C4A632DF27D59DB200DA0504 /* EmployeeAPIDataSource+Decode.swift in Sources */,
-				C4F85AFE27D6BF08002AFA5F /* EmployeeSmallPhoto.swift in Sources */,
+				C4F85AFE27D6BF08002AFA5F /* EmployeePhoto.swift in Sources */,
 				C4A632C627D3F88F00DA0504 /* FetchEmployeeUseCaseable.swift in Sources */,
 				C4A632B327D3EAD000DA0504 /* EmployeeRepository.swift in Sources */,
 				C4A017B027D66567005C8F91 /* APIConfigurable.swift in Sources */,
-				C4A632CF27D52D0300DA0504 /* ListViewModel.swift in Sources */,
+				C4A632CF27D52D0300DA0504 /* EmployeeListViewModel.swift in Sources */,
 				C4A632D527D5807E00DA0504 /* ErrorView.swift in Sources */,
 				C4A632D127D5321D00DA0504 /* FetchEmployeesUseCase.swift in Sources */,
 				C4A017B327D665A5005C8F91 /* EmployeeAPIConfiguration.swift in Sources */,

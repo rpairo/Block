@@ -21,13 +21,13 @@ struct EmployeeRow: View {
     }
 
     var photo: some View {
-        EmployeeSmallPhoto(photoURL: employee.smallPhoto)
+        EmployeePhoto(photoURL: employee.smallPhoto, size: 55)
     }
 
     var description: some View {
         EmployeeDescription(
             name: employee.name,
-            team: employee.team,
+            email: employee.email,
             biography: employee.biography
         )
     }
