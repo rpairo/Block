@@ -14,22 +14,35 @@ struct EmployeePhoto: View {
 
     // MARK: View
     var body: some View {
-        AsyncImage(url: URL(string: photoURL), transaction: Transaction(animation: .easeInOut)) { phase in
-            switch phase {
-            case .empty:
-                ProgressView()
-            case .success(let image):
-                image
-                    .resizable()
-                    .scaledToFill()
-            case .failure:
-                Image(systemName: "wifi.slash")
-            @unknown default:
-                EmptyView()
+        image
+            .frame(width: size, height: size)
+            .background(Color.gray)
+            .clipShape(Circle())
+    }
+
+    @ViewBuilder
+    var image: some View {
+        if let url = URL(string: photoURL) {
+            CacheAsyncImage(url: url, transaction: Transaction(animation: .easeInOut)) { phase in
+                switch phase {
+                case .empty:
+                    ProgressView()
+                case .success(let image):
+                    image
+                        .resizable()
+                        .scaledToFill()
+                case .failure:
+                    placeholder
+                @unknown default:
+                    EmptyView()
+                }
             }
+        } else {
+            placeholder
         }
-        .frame(width: size, height: size)
-        .background(Color.gray)
-        .clipShape(Circle())
+    }
+
+    var placeholder: some View {
+        Image(systemName: "wifi.slash")
     }
 }

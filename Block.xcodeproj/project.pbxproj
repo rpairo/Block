@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C41AA15C27D70CB900C0EDFE /* CacheAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA15B27D70CB900C0EDFE /* CacheAsyncImage.swift */; };
 		C42DCC6E27D6A03A00F1CEDB /* EmployeeAPIDataSourceNoURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DCC6D27D6A03A00F1CEDB /* EmployeeAPIDataSourceNoURLMock.swift */; };
 		C42DCC7027D6A08300F1CEDB /* EmployeeAPIDataSourceBadURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DCC6F27D6A08300F1CEDB /* EmployeeAPIDataSourceBadURLMock.swift */; };
 		C42DCC7227D6A0BD00F1CEDB /* EmployeeAPIDataSourceMalformedURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DCC7127D6A0BD00F1CEDB /* EmployeeAPIDataSourceMalformedURLMock.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C41AA15B27D70CB900C0EDFE /* CacheAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheAsyncImage.swift; sourceTree = "<group>"; };
 		C42DCC6D27D6A03A00F1CEDB /* EmployeeAPIDataSourceNoURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceNoURLMock.swift; sourceTree = "<group>"; };
 		C42DCC6F27D6A08300F1CEDB /* EmployeeAPIDataSourceBadURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceBadURLMock.swift; sourceTree = "<group>"; };
 		C42DCC7127D6A0BD00F1CEDB /* EmployeeAPIDataSourceMalformedURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceMalformedURLMock.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				C4F85AFD27D6BF08002AFA5F /* EmployeePhoto.swift */,
+				C41AA15B27D70CB900C0EDFE /* CacheAsyncImage.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -606,6 +609,7 @@
 				C4A6329927D3CEE000DA0504 /* EmployeeListView.swift in Sources */,
 				C4A632DB27D5855F00DA0504 /* ListView.swift in Sources */,
 				C4A632B527D3EB0C00DA0504 /* EmployeeRepositable.swift in Sources */,
+				C41AA15C27D70CB900C0EDFE /* CacheAsyncImage.swift in Sources */,
 				C4A632DD27D585EE00DA0504 /* EmployeeRow.swift in Sources */,
 				C4F85B0027D6C04F002AFA5F /* EmployeeDescription.swift in Sources */,
 				C4A6329727D3CEE000DA0504 /* BlockApp.swift in Sources */,
