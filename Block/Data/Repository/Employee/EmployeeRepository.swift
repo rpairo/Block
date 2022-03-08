@@ -11,11 +11,6 @@ struct EmployeeRepository: EmployeeRepositable {
     // MARK: Properties
     private let dataSource: EmployeeDataSourceable
 
-    // MARK: Constructos
-    init(dataSource: EmployeeDataSourceable) {
-        self.dataSource = dataSource
-    }
-
     // MARK: Functionality
     func fetch(onComplete: @escaping FetchEmployeeResult) {
         dataSource.fetch(onComplete: onComplete)
