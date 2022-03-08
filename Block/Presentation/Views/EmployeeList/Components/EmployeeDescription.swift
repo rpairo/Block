@@ -10,7 +10,7 @@ import SwiftUI
 struct EmployeeDescription: View {
     // MARK: Properties
     let name: String
-    let team: String
+    let email: String
     let biography: String
 
     // MARK: View
@@ -19,7 +19,7 @@ struct EmployeeDescription: View {
             Text(name)
                 .font(.headline)
 
-            Text(team)
+            Text(email)
                 .font(.footnote)
                 .foregroundColor(.gray)
 

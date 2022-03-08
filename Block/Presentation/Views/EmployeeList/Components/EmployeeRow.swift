@@ -27,7 +27,7 @@ struct EmployeeRow: View {
     var description: some View {
         EmployeeDescription(
             name: employee.name,
-            team: employee.team,
+            email: employee.email,
             biography: employee.biography
         )
     }
