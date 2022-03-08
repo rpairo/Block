@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum EmployeListState {
+enum EmployeListState: Equatable {
     case idle
     case loading
     case loaded
