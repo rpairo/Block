@@ -15,6 +15,8 @@
 		C41AA16A27D7260500C0EDFE /* EmployeeRepositoryBadURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA16927D7260500C0EDFE /* EmployeeRepositoryBadURLMock.swift */; };
 		C41AA16C27D7269000C0EDFE /* EmployeeRepositoryMalformedURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA16B27D7269000C0EDFE /* EmployeeRepositoryMalformedURLMock.swift */; };
 		C41AA16E27D726F000C0EDFE /* EmployeeRepositorySuccessMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA16D27D726F000C0EDFE /* EmployeeRepositorySuccessMock.swift */; };
+		C41AA17227D728B200C0EDFE /* EmployeeListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA17127D728B200C0EDFE /* EmployeeListViewModelTest.swift */; };
+		C41AA17527D7293D00C0EDFE /* EmployeeUseCaseEmptyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41AA17427D7293D00C0EDFE /* EmployeeUseCaseEmptyMock.swift */; };
 		C42DCC6E27D6A03A00F1CEDB /* EmployeeAPIDataSourceNoURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DCC6D27D6A03A00F1CEDB /* EmployeeAPIDataSourceNoURLMock.swift */; };
 		C42DCC7027D6A08300F1CEDB /* EmployeeAPIDataSourceBadURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DCC6F27D6A08300F1CEDB /* EmployeeAPIDataSourceBadURLMock.swift */; };
 		C42DCC7227D6A0BD00F1CEDB /* EmployeeAPIDataSourceMalformedURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DCC7127D6A0BD00F1CEDB /* EmployeeAPIDataSourceMalformedURLMock.swift */; };
@@ -75,6 +77,8 @@
 		C41AA16927D7260500C0EDFE /* EmployeeRepositoryBadURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRepositoryBadURLMock.swift; sourceTree = "<group>"; };
 		C41AA16B27D7269000C0EDFE /* EmployeeRepositoryMalformedURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRepositoryMalformedURLMock.swift; sourceTree = "<group>"; };
 		C41AA16D27D726F000C0EDFE /* EmployeeRepositorySuccessMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRepositorySuccessMock.swift; sourceTree = "<group>"; };
+		C41AA17127D728B200C0EDFE /* EmployeeListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewModelTest.swift; sourceTree = "<group>"; };
+		C41AA17427D7293D00C0EDFE /* EmployeeUseCaseEmptyMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeUseCaseEmptyMock.swift; sourceTree = "<group>"; };
 		C42DCC6D27D6A03A00F1CEDB /* EmployeeAPIDataSourceNoURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceNoURLMock.swift; sourceTree = "<group>"; };
 		C42DCC6F27D6A08300F1CEDB /* EmployeeAPIDataSourceBadURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceBadURLMock.swift; sourceTree = "<group>"; };
 		C42DCC7127D6A0BD00F1CEDB /* EmployeeAPIDataSourceMalformedURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceMalformedURLMock.swift; sourceTree = "<group>"; };
@@ -179,6 +183,31 @@
 				C41AA16927D7260500C0EDFE /* EmployeeRepositoryBadURLMock.swift */,
 				C41AA16B27D7269000C0EDFE /* EmployeeRepositoryMalformedURLMock.swift */,
 				C41AA16D27D726F000C0EDFE /* EmployeeRepositorySuccessMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		C41AA16F27D7287700C0EDFE /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C41AA17027D7288B00C0EDFE /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		C41AA17027D7288B00C0EDFE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C41AA17327D7291D00C0EDFE /* Mock */,
+				C41AA17127D728B200C0EDFE /* EmployeeListViewModelTest.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C41AA17327D7291D00C0EDFE /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				C41AA17427D7293D00C0EDFE /* EmployeeUseCaseEmptyMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -465,6 +494,7 @@
 		C4A632E727D6389800DA0504 /* BlockTests */ = {
 			isa = PBXGroup;
 			children = (
+				C41AA16F27D7287700C0EDFE /* Presentation */,
 				C41AA15D27D7215B00C0EDFE /* Domain */,
 				C4A632EF27D6399F00DA0504 /* Data */,
 			);
@@ -698,8 +728,10 @@
 				C42DCC6E27D6A03A00F1CEDB /* EmployeeAPIDataSourceNoURLMock.swift in Sources */,
 				C41AA16127D7229E00C0EDFE /* FetchEmployeesUseCaseTest.swift in Sources */,
 				C485986A27D681A8004B4742 /* EmployeeAPIConfigManagerBadURLMock.swift in Sources */,
+				C41AA17527D7293D00C0EDFE /* EmployeeUseCaseEmptyMock.swift in Sources */,
 				C41AA16827D725A700C0EDFE /* EmployeeRepositoryNoURLMock.swift in Sources */,
 				C485986827D68115004B4742 /* EmployeeAPIConfigManagerNoURLMock.swift in Sources */,
+				C41AA17227D728B200C0EDFE /* EmployeeListViewModelTest.swift in Sources */,
 				C4BEE43327D69D3700177FB9 /* EmployeeAPIDataSourceEmptyMock.swift in Sources */,
 				C4BEE42C27D689E000177FB9 /* EmployeeAPIConfigManagerMalformedURLMock.swift in Sources */,
 				C41AA16E27D726F000C0EDFE /* EmployeeRepositorySuccessMock.swift in Sources */,
