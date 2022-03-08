@@ -14,5 +14,8 @@ struct ErrorLabel: View {
     // MARK: View
     var body: some View {
         Text(title)
+            .font(.title2)
+            .foregroundColor(.red)
+            .padding()
     }
 }

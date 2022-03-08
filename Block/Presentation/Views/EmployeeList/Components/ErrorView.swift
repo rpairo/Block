@@ -22,8 +22,8 @@ struct ErrorView: View {
             ErrorLabel(title: "Empty list")
         case .data:
             ErrorLabel(title: "Data error")
-        case .statusCode:
-            ErrorLabel(title: "Status code error")
+        case .statusCode(let code):
+            ErrorLabel(title: "Status code error: \(code)")
         case .unkown:
             ErrorLabel(title: "Unkown error")
         }

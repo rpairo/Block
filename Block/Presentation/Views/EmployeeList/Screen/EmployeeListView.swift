@@ -16,27 +16,33 @@ struct EmployeeListView: View {
     // MARK: Views
     var body: some View {
         NavigationView {
-            VStack {
-                if let error = viewModel.error {
-                    ErrorView(error: error)
-                } else {
-                    ListView(employees: employees)
+            switch viewModel.state {
+            case .idle:
+                EmptyView()
+            case .error(let error):
+                ErrorView(error: error)
+            case .loading:
+                VStack(alignment: .center) {
+                    ProgressView()
+                        .padding()
+                    Text("Loading employees")
                 }
-            }
-
-            .ignoresSafeArea(.keyboard)
-            .navigationTitle("Employees")
-            .searchable(text: $searchedText)
-            .refreshable {
-                viewModel.onRefresh {
-                    employees = viewModel.employees
-                }
+            case .loaded:
+                ListView(employees: employees)
+                    .ignoresSafeArea(.keyboard)
+                    .navigationTitle("Employees")
+                    .searchable(text: $searchedText)
+                    .refreshable {
+                        viewModel.onRefresh {
+                            self.employees = viewModel.employees
+                        }
+                    }
             }
         }
         .navigationViewStyle(.stack)
         .onAppear {
             viewModel.onAppear {
-                employees = viewModel.employees
+                self.employees = viewModel.employees
             }
         }
         .onChange(of: searchedText) { searchedText in
