@@ -31,7 +31,7 @@
 		C4A632C627D3F88F00DA0504 /* FetchEmployeeUseCaseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A632C527D3F88F00DA0504 /* FetchEmployeeUseCaseable.swift */; };
 		C4A632CA27D4004200DA0504 /* EmployeeAPIConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4A632C927D4004200DA0504 /* EmployeeAPIConfiguration.plist */; };
 		C4A632CC27D4031D00DA0504 /* EmployeeAPIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A632CB27D4031D00DA0504 /* EmployeeAPIEndpoints.swift */; };
-		C4A632CF27D52D0300DA0504 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A632CE27D52D0300DA0504 /* ListViewModel.swift */; };
+		C4A632CF27D52D0300DA0504 /* EmployeeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A632CE27D52D0300DA0504 /* EmployeeListViewModel.swift */; };
 		C4A632D127D5321D00DA0504 /* FetchEmployeesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A632D027D5321D00DA0504 /* FetchEmployeesUseCase.swift */; };
 		C4A632D527D5807E00DA0504 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A632D427D5807E00DA0504 /* ErrorView.swift */; };
 		C4A632D727D5822600DA0504 /* ErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A632D627D5822600DA0504 /* ErrorLabel.swift */; };
@@ -84,7 +84,7 @@
 		C4A632C527D3F88F00DA0504 /* FetchEmployeeUseCaseable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchEmployeeUseCaseable.swift; sourceTree = "<group>"; };
 		C4A632C927D4004200DA0504 /* EmployeeAPIConfiguration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = EmployeeAPIConfiguration.plist; sourceTree = "<group>"; };
 		C4A632CB27D4031D00DA0504 /* EmployeeAPIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIEndpoints.swift; sourceTree = "<group>"; };
-		C4A632CE27D52D0300DA0504 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		C4A632CE27D52D0300DA0504 /* EmployeeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewModel.swift; sourceTree = "<group>"; };
 		C4A632D027D5321D00DA0504 /* FetchEmployeesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchEmployeesUseCase.swift; sourceTree = "<group>"; };
 		C4A632D427D5807E00DA0504 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		C4A632D627D5822600DA0504 /* ErrorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLabel.swift; sourceTree = "<group>"; };
@@ -373,7 +373,7 @@
 		C4A632CD27D52CF300DA0504 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				C4A632CE27D52D0300DA0504 /* ListViewModel.swift */,
+				C4A632CE27D52D0300DA0504 /* EmployeeListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -620,7 +620,7 @@
 				C4A632C627D3F88F00DA0504 /* FetchEmployeeUseCaseable.swift in Sources */,
 				C4A632B327D3EAD000DA0504 /* EmployeeRepository.swift in Sources */,
 				C4A017B027D66567005C8F91 /* APIConfigurable.swift in Sources */,
-				C4A632CF27D52D0300DA0504 /* ListViewModel.swift in Sources */,
+				C4A632CF27D52D0300DA0504 /* EmployeeListViewModel.swift in Sources */,
 				C4A632D527D5807E00DA0504 /* ErrorView.swift in Sources */,
 				C4A632D127D5321D00DA0504 /* FetchEmployeesUseCase.swift in Sources */,
 				C4A017B327D665A5005C8F91 /* EmployeeAPIConfiguration.swift in Sources */,

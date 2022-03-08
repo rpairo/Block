@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EmployeeListView: View {
     // MARK: Properties
-    @StateObject var viewModel: ListViewModel
+    @StateObject var viewModel: EmployeeListViewModel
 
     // MARK: Views
     var body: some View {
