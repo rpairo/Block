@@ -131,6 +131,29 @@
 			path = Commons;
 			sourceTree = "<group>";
 		};
+		C41AA15D27D7215B00C0EDFE /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C41AA15E27D7216900C0EDFE /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C41AA15E27D7216900C0EDFE /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				C41AA15F27D7217300C0EDFE /* FetchEmployees */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		C41AA15F27D7217300C0EDFE /* FetchEmployees */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FetchEmployees;
+			sourceTree = "<group>";
+		};
 		C485986227D67286004B4742 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,7 +286,7 @@
 		C4A632AA27D3CFA300DA0504 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				C4A632C727D3F98F00DA0504 /* FetchUsers */,
+				C4A632C727D3F98F00DA0504 /* FetchEmployees */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -353,13 +376,13 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		C4A632C727D3F98F00DA0504 /* FetchUsers */ = {
+		C4A632C727D3F98F00DA0504 /* FetchEmployees */ = {
 			isa = PBXGroup;
 			children = (
 				C4A632C527D3F88F00DA0504 /* FetchEmployeeUseCaseable.swift */,
 				C4A632D027D5321D00DA0504 /* FetchEmployeesUseCase.swift */,
 			);
-			path = FetchUsers;
+			path = FetchEmployees;
 			sourceTree = "<group>";
 		};
 		C4A632C827D3FFB200DA0504 /* Configuration */ = {
@@ -413,6 +436,7 @@
 		C4A632E727D6389800DA0504 /* BlockTests */ = {
 			isa = PBXGroup;
 			children = (
+				C41AA15D27D7215B00C0EDFE /* Domain */,
 				C4A632EF27D6399F00DA0504 /* Data */,
 			);
 			path = BlockTests;
