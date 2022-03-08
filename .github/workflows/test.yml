@@ -14,6 +14,6 @@ jobs:
     - name: Lint
       run: SwiftLint
     - name: Build for iOS
-      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild build-for-testing -scheme Block -destination "platform=iOS Simulator,OS=latest,name=iPhone 12" | xcpretty
+      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild build-for-testing -scheme Block -destination "platform=iOS Simulator,OS=latest,name=iPhone 13" | xcpretty
     - name: Run iOS tests
-      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild test-without-building -scheme BlockTests -destination "platform=iOS Simulator,OS=latest,name=iPhone 12" | xcpretty
+      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild test-without-building -scheme Block -destination "platform=iOS Simulator,OS=latest,name=iPhone 13" | xcpretty
