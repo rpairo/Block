@@ -11,6 +11,11 @@
 ## Steps to run the app
 - Just run the app. It has no dependencies.
 
+## Demo
+<p align="center">
+<img width="300" height="648" src="https://user-images.githubusercontent.com/14141324/157325042-6da552bb-2251-4daf-82af-1ebca37cae81.gif">
+</p>
+
 ## What areas of the app did you focus on?
 
 | Features         | Code               | Design             | QA                      |
@@ -20,11 +25,6 @@
 | Pull to refresh  | Maintainability    | Apple Human UX     | Linter                  |
 | Sorting by name  | Decoupling         | UI                 | Unit Testing            |
 | Image cache      | Clean Architecture |                    | GitFlow                 |
-
-## Demo
-<p align="center">
-<img width="300" height="648" src="https://user-images.githubusercontent.com/14141324/157325042-6da552bb-2251-4daf-82af-1ebca37cae81.gif">
-</p>
 
 ## What was the reason for your focus? What problems were you trying to solve?
 - I focused on the maintainability and readability of the code, so that it was easy and fast for the interviewers to understand.
