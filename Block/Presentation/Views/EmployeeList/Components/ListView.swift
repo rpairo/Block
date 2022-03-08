@@ -10,13 +10,20 @@ import SwiftUI
 struct ListView: View {
     // MARK: Properties
     let employees: [Employee]
+    private var groupeds: [String: [Employee]] {
+        Dictionary(grouping: employees) { $0.team }
+    }
 
     // MARK: View
     var body: some View {
         List {
-            ForEach(employees) { employee in
-                EmployeeRow(employee: employee)
-                    .padding(.vertical, 10)
+            ForEach(groupeds.keys.sorted(), id: \.self) { team in
+                Section(team) {
+                    ForEach(groupeds[team]?.sorted { $0.name < $1.name } ?? []) { employee in
+                        EmployeeRow(employee: employee)
+                            .padding(.vertical, 10)
+                    }
+                }
             }
         }
     }

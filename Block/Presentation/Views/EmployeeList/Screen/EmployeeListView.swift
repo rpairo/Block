@@ -35,6 +35,7 @@ struct EmployeeListView: View {
             viewModel.onAppear()
         }
         .refreshable {
+            viewModel.employees.removeAll()
             viewModel.onRefresh()
         }
         .searchable(text: $searchText)
