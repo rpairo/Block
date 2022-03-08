@@ -108,6 +108,7 @@
 		C485986727D68115004B4742 /* EmployeeAPIConfigManagerNoURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIConfigManagerNoURLMock.swift; sourceTree = "<group>"; };
 		C485986927D681A8004B4742 /* EmployeeAPIConfigManagerBadURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIConfigManagerBadURLMock.swift; sourceTree = "<group>"; };
 		C49F828A27D7C22900D9C734 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		C49F828C27D7CD5100D9C734 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C4A017AC27D65FF4005C8F91 /* ConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
 		C4A017AF27D66567005C8F91 /* APIConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfigurable.swift; sourceTree = "<group>"; };
 		C4A017B227D665A5005C8F91 /* EmployeeAPIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIConfiguration.swift; sourceTree = "<group>"; };
@@ -305,6 +306,7 @@
 		C4A6328A27D3CEE000DA0504 = {
 			isa = PBXGroup;
 			children = (
+				C49F828C27D7CD5100D9C734 /* README.md */,
 				C4A6329527D3CEE000DA0504 /* Block */,
 				C4A632E727D6389800DA0504 /* BlockTests */,
 				C4A6329427D3CEE000DA0504 /* Products */,
