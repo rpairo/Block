@@ -13,7 +13,7 @@ class EmployeeListViewModel: ObservableObject {
     @Published var error: FetchEmployeeError?
 
     // MARK: Use cases
-    let fetchEmployeeUseCase: FetchEmployeeUseCaseable
+    private let fetchEmployeeUseCase: FetchEmployeeUseCaseable
 
     // MARK: Constructor
     init(fetchEmployeeUseCase: FetchEmployeeUseCaseable) {

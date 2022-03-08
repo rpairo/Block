@@ -9,10 +9,10 @@ import Foundation
 
 struct FetchEmployeesUseCase: FetchEmployeeUseCaseable {
     // MARK: Properties
-    private let repository: EmployeeRepository
+    private let repository: EmployeeRepositable
 
     // MARK: Constructor
-    init(repository: EmployeeRepository) {
+    init(repository: EmployeeRepositable) {
         self.repository = repository
     }
 
