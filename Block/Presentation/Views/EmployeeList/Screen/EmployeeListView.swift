@@ -24,13 +24,14 @@ struct EmployeeListView: View {
                 }
             }
 
+            .ignoresSafeArea(.keyboard)
             .navigationTitle("Employees")
+            .searchable(text: $searchedText)
             .refreshable {
                 viewModel.onRefresh {
                     employees = viewModel.employees
                 }
             }
-            .searchable(text: $searchedText)
         }
         .navigationViewStyle(.stack)
         .onAppear {
