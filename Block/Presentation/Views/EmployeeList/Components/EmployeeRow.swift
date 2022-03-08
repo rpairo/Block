@@ -21,7 +21,7 @@ struct EmployeeRow: View {
     }
 
     var photo: some View {
-        EmployeeSmallPhoto(photoURL: employee.smallPhoto)
+        EmployeePhoto(photoURL: employee.smallPhoto, size: 44)
     }
 
     var description: some View {

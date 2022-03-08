@@ -44,7 +44,7 @@
 		C4BEE43027D69B4F00177FB9 /* EmployeeRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BEE42F27D69B4F00177FB9 /* EmployeeRepositoryTest.swift */; };
 		C4BEE43327D69D3700177FB9 /* EmployeeAPIDataSourceEmptyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BEE43227D69D3700177FB9 /* EmployeeAPIDataSourceEmptyMock.swift */; };
 		C4BEE43527D69E3A00177FB9 /* EmployeeAPIDataSourceMalformedMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BEE43427D69E3A00177FB9 /* EmployeeAPIDataSourceMalformedMock.swift */; };
-		C4F85AFE27D6BF08002AFA5F /* EmployeeSmallPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F85AFD27D6BF08002AFA5F /* EmployeeSmallPhoto.swift */; };
+		C4F85AFE27D6BF08002AFA5F /* EmployeePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F85AFD27D6BF08002AFA5F /* EmployeePhoto.swift */; };
 		C4F85B0027D6C04F002AFA5F /* EmployeeDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F85AFF27D6C04F002AFA5F /* EmployeeDescription.swift */; };
 /* End PBXBuildFile section */
 
@@ -98,7 +98,7 @@
 		C4BEE42F27D69B4F00177FB9 /* EmployeeRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRepositoryTest.swift; sourceTree = "<group>"; };
 		C4BEE43227D69D3700177FB9 /* EmployeeAPIDataSourceEmptyMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceEmptyMock.swift; sourceTree = "<group>"; };
 		C4BEE43427D69E3A00177FB9 /* EmployeeAPIDataSourceMalformedMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceMalformedMock.swift; sourceTree = "<group>"; };
-		C4F85AFD27D6BF08002AFA5F /* EmployeeSmallPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSmallPhoto.swift; sourceTree = "<group>"; };
+		C4F85AFD27D6BF08002AFA5F /* EmployeePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeePhoto.swift; sourceTree = "<group>"; };
 		C4F85AFF27D6C04F002AFA5F /* EmployeeDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDescription.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +120,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C41AA15A27D6F58000C0EDFE /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				C4F85AFD27D6BF08002AFA5F /* EmployeePhoto.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
 		C485986227D67286004B4742 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +268,7 @@
 		C4A632AB27D3CFC100DA0504 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C41AA15A27D6F58000C0EDFE /* Commons */,
 				C4A632D927D5839900DA0504 /* EmployeeList */,
 			);
 			path = Views;
@@ -384,7 +393,6 @@
 				C4A632D627D5822600DA0504 /* ErrorLabel.swift */,
 				C4A632DA27D5855F00DA0504 /* ListView.swift */,
 				C4A632DC27D585EE00DA0504 /* EmployeeRow.swift */,
-				C4F85AFD27D6BF08002AFA5F /* EmployeeSmallPhoto.swift */,
 				C4F85AFF27D6C04F002AFA5F /* EmployeeDescription.swift */,
 			);
 			path = Components;
@@ -608,7 +616,7 @@
 				C4A632D727D5822600DA0504 /* ErrorLabel.swift in Sources */,
 				C4A632CC27D4031D00DA0504 /* EmployeeAPIEndpoints.swift in Sources */,
 				C4A632DF27D59DB200DA0504 /* EmployeeAPIDataSource+Decode.swift in Sources */,
-				C4F85AFE27D6BF08002AFA5F /* EmployeeSmallPhoto.swift in Sources */,
+				C4F85AFE27D6BF08002AFA5F /* EmployeePhoto.swift in Sources */,
 				C4A632C627D3F88F00DA0504 /* FetchEmployeeUseCaseable.swift in Sources */,
 				C4A632B327D3EAD000DA0504 /* EmployeeRepository.swift in Sources */,
 				C4A017B027D66567005C8F91 /* APIConfigurable.swift in Sources */,

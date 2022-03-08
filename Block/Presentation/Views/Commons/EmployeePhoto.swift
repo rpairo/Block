@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-struct EmployeeSmallPhoto: View {
+struct EmployeePhoto: View {
     // MARK: Properties
     let photoURL: String
+    let size: CGFloat
 
     // MARK: View
     var body: some View {
@@ -27,7 +28,7 @@ struct EmployeeSmallPhoto: View {
                 EmptyView()
             }
         }
-        .frame(width: 44, height: 44)
+        .frame(width: size, height: size)
         .background(Color.gray)
         .clipShape(Circle())
     }
