@@ -15,10 +15,8 @@ struct ListView: View {
     var body: some View {
         List {
             ForEach(employees) { employee in
-                NavigationLink(destination: Text(employee.name)) {
-                    EmployeeRow(employee: employee)
-                        .padding(.vertical, 10)
-                }
+                EmployeeRow(employee: employee)
+                    .padding(.vertical, 10)
             }
         }
     }
