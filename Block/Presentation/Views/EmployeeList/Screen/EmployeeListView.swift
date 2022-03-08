@@ -10,7 +10,7 @@ import SwiftUI
 struct EmployeeListView: View {
     // MARK: Properties
     @StateObject var viewModel: EmployeeListViewModel
-    @State private var searchedText = ""
+    @State private var searchedText = "" 
     @State private var employees = [Employee]()
 
     // MARK: Views
