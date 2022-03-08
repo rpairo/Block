@@ -21,6 +21,7 @@
 | Sorting by name  | Decoupling         | UI                 | Unit Testing            |
 | Image cache      | Clean Architecture |                    | GitFlow                 |
 
+## Demo
 <p align="center">
 <img width="300" height="648" src="https://user-images.githubusercontent.com/14141324/157325042-6da552bb-2251-4daf-82af-1ebca37cae81.gif">
 </p>
