@@ -44,6 +44,8 @@
 		C4BEE43027D69B4F00177FB9 /* EmployeeRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BEE42F27D69B4F00177FB9 /* EmployeeRepositoryTest.swift */; };
 		C4BEE43327D69D3700177FB9 /* EmployeeAPIDataSourceEmptyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BEE43227D69D3700177FB9 /* EmployeeAPIDataSourceEmptyMock.swift */; };
 		C4BEE43527D69E3A00177FB9 /* EmployeeAPIDataSourceMalformedMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BEE43427D69E3A00177FB9 /* EmployeeAPIDataSourceMalformedMock.swift */; };
+		C4F85AFE27D6BF08002AFA5F /* EmployeeSmallPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F85AFD27D6BF08002AFA5F /* EmployeeSmallPhoto.swift */; };
+		C4F85B0027D6C04F002AFA5F /* EmployeeDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F85AFF27D6C04F002AFA5F /* EmployeeDescription.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		C4BEE42F27D69B4F00177FB9 /* EmployeeRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRepositoryTest.swift; sourceTree = "<group>"; };
 		C4BEE43227D69D3700177FB9 /* EmployeeAPIDataSourceEmptyMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceEmptyMock.swift; sourceTree = "<group>"; };
 		C4BEE43427D69E3A00177FB9 /* EmployeeAPIDataSourceMalformedMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceMalformedMock.swift; sourceTree = "<group>"; };
+		C4F85AFD27D6BF08002AFA5F /* EmployeeSmallPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSmallPhoto.swift; sourceTree = "<group>"; };
+		C4F85AFF27D6C04F002AFA5F /* EmployeeDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDescription.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -380,6 +384,8 @@
 				C4A632D627D5822600DA0504 /* ErrorLabel.swift */,
 				C4A632DA27D5855F00DA0504 /* ListView.swift */,
 				C4A632DC27D585EE00DA0504 /* EmployeeRow.swift */,
+				C4F85AFD27D6BF08002AFA5F /* EmployeeSmallPhoto.swift */,
+				C4F85AFF27D6C04F002AFA5F /* EmployeeDescription.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -593,6 +599,7 @@
 				C4A632DB27D5855F00DA0504 /* ListView.swift in Sources */,
 				C4A632B527D3EB0C00DA0504 /* EmployeeRepositable.swift in Sources */,
 				C4A632DD27D585EE00DA0504 /* EmployeeRow.swift in Sources */,
+				C4F85B0027D6C04F002AFA5F /* EmployeeDescription.swift in Sources */,
 				C4A6329727D3CEE000DA0504 /* BlockApp.swift in Sources */,
 				C4A632C427D3F75900DA0504 /* Employee.swift in Sources */,
 				C4A632BE27D3F0FC00DA0504 /* EmployeeDTO.swift in Sources */,
@@ -601,6 +608,7 @@
 				C4A632D727D5822600DA0504 /* ErrorLabel.swift in Sources */,
 				C4A632CC27D4031D00DA0504 /* EmployeeAPIEndpoints.swift in Sources */,
 				C4A632DF27D59DB200DA0504 /* EmployeeAPIDataSource+Decode.swift in Sources */,
+				C4F85AFE27D6BF08002AFA5F /* EmployeeSmallPhoto.swift in Sources */,
 				C4A632C627D3F88F00DA0504 /* FetchEmployeeUseCaseable.swift in Sources */,
 				C4A632B327D3EAD000DA0504 /* EmployeeRepository.swift in Sources */,
 				C4A017B027D66567005C8F91 /* APIConfigurable.swift in Sources */,

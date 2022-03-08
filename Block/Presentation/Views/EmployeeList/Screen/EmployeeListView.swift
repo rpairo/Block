@@ -27,5 +27,8 @@ struct EmployeeListView: View {
         .onAppear {
             viewModel.onAppear()
         }
+        .refreshable {
+            viewModel.onRefresh()
+        }
     }
 }

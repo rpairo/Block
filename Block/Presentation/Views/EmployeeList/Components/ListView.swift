@@ -17,6 +17,7 @@ struct ListView: View {
             ForEach(employees) { employee in
                 NavigationLink(destination: Text(employee.name)) {
                     EmployeeRow(employee: employee)
+                        .padding(.vertical, 10)
                 }
             }
         }

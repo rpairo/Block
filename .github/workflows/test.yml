@@ -1,19 +1,19 @@
-name: Swift
+name: iOS Testing
 
 on:
-  push:
-    branches: [ $default-branch ]
   pull_request:
-    branches: [ $default-branch ]
+    branches: [ master ]
 
 jobs:
-  build:
-
-    runs-on: macos-latest
-
+  test:
+    name: Testing iOS app
+    runs-on: macOS-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+    - name: Repository checkout
+      uses: actions/checkout@v2
+    - name: Lint
+      run: SwiftLint
+    - name: Build for iOS
+      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild build-for-testing -scheme Block -destination "platform=iOS Simulator,OS=latest,name=iPhone 13" | xcpretty
+    - name: Run iOS tests
+      run: set -o pipefail && env NSUnbufferedIO=YES xcodebuild test-without-building -scheme Block -destination "platform=iOS Simulator,OS=latest,name=iPhone 13" | xcpretty
