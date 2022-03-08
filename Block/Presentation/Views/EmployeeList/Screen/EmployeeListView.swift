@@ -10,7 +10,7 @@ import SwiftUI
 struct EmployeeListView: View {
     // MARK: Properties
     @StateObject var viewModel: EmployeeListViewModel
-    @State private var searchedText = "" 
+    @State private var searchedText = ""
     @State private var employees = [Employee]()
 
     // MARK: Views
@@ -22,21 +22,9 @@ struct EmployeeListView: View {
             case .error(let error):
                 ErrorView(error: error)
             case .loading:
-                VStack(alignment: .center) {
-                    ProgressView()
-                        .padding()
-                    Text("Loading employees")
-                }
+                LoadingView(title: "Loading employees")
             case .loaded:
-                ListView(employees: employees)
-                    .ignoresSafeArea(.keyboard)
-                    .navigationTitle("Employees")
-                    .searchable(text: $searchedText)
-                    .refreshable {
-                        viewModel.onRefresh {
-                            self.employees = viewModel.employees
-                        }
-                    }
+                list
             }
         }
         .navigationViewStyle(.stack)
@@ -50,5 +38,17 @@ struct EmployeeListView: View {
             viewModel.employees :
             viewModel.employees.filter { $0.name.contains(searchedText) }
         }
+    }
+
+    var list: some View {
+        ListView(employees: employees)
+            .ignoresSafeArea(.keyboard)
+            .navigationTitle("Employees")
+            .searchable(text: $searchedText)
+            .refreshable {
+                viewModel.onRefresh {
+                    self.employees = viewModel.employees
+                }
+            }
     }
 }

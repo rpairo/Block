@@ -22,27 +22,27 @@ struct EmployeePhoto: View {
 
     @ViewBuilder
     var image: some View {
-        if let url = URL(string: photoURL) {
-            CacheAsyncImage(url: url, transaction: Transaction(animation: .easeInOut)) { phase in
-                switch phase {
-                case .empty:
-                    ProgressView()
-                case .success(let image):
-                    image
-                        .resizable()
-                        .scaledToFill()
-                case .failure:
-                    placeholder
-                @unknown default:
-                    EmptyView()
-                }
+        CacheAsyncImage(url: URL(string: photoURL), transaction: Transaction(animation: .easeInOut)) { phase in
+            switch phase {
+            case .empty:
+                ProgressView()
+            case .success(let image):
+                image
+                    .resizable()
+                    .scaledToFill()
+            case .failure:
+                failureImage
+            @unknown default:
+                placeholder
             }
-        } else {
-            placeholder
         }
     }
 
     var placeholder: some View {
+        Image(systemName: "person.fill")
+    }
+
+    var failureImage: some View {
         Image(systemName: "wifi.slash")
     }
 }
