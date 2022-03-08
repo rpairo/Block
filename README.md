@@ -14,7 +14,7 @@
 ## Demo
 | Day mode         | Night mode         |
 |:----------------:|:------------------:|
-| ![Day](https://user-images.githubusercontent.com/14141324/157325042-6da552bb-2251-4daf-82af-1ebca37cae81.gif) | ![Night](https://user-images.githubusercontent.com/14141324/157342235-b0ed96cc-0eaa-4225-ab26-f004d89447e9.gif) |
+|![Day](https://user-images.githubusercontent.com/14141324/157325042-6da552bb-2251-4daf-82af-1ebca37cae81.gif) | ![Night](https://user-images.githubusercontent.com/14141324/157342235-b0ed96cc-0eaa-4225-ab26-f004d89447e9.gif)|
 
 ## What areas of the app did you focus on?
 
