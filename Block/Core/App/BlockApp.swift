@@ -17,7 +17,7 @@ struct BlockApp: App {
                         repository: EmployeeRepository(
                             dataSource: EmployeeAPIDataSource(
                                 configuration: EmployeeAPIConfigManager()
-                            )
+                            ), database: EmployeeDatabaseDatasource()
                         )
                     )
                 )

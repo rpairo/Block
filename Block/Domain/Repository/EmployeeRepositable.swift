@@ -10,4 +10,5 @@ import Foundation
 protocol EmployeeRepositable {
     // MARK: Functionality
     func fetch(onComplete: @escaping FetchEmployeeResult)
+    func store(onComplete: @escaping StoreEmployeeResult, employees: [Employee])
 }

@@ -31,6 +31,11 @@
 		C42DCC7227D6A0BD00F1CEDB /* EmployeeAPIDataSourceMalformedURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DCC7127D6A0BD00F1CEDB /* EmployeeAPIDataSourceMalformedURLMock.swift */; };
 		C42DCC7427D6A16C00F1CEDB /* EmployeeAPIConfigManagerSuccessMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DCC7327D6A16C00F1CEDB /* EmployeeAPIConfigManagerSuccessMock.swift */; };
 		C42DCC7627D6A3B400F1CEDB /* EmployeeAPIDataSourceSuccessMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DCC7527D6A3B400F1CEDB /* EmployeeAPIDataSourceSuccessMock.swift */; };
+		C47366C527F3A02E00E2C49D /* EmployeeDatabaseDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47366C427F3A02E00E2C49D /* EmployeeDatabaseDataSource.swift */; };
+		C47366C927F3A40F00E2C49D /* LocalStorageDataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C47366C727F3A40F00E2C49D /* LocalStorageDataBase.xcdatamodeld */; };
+		C47366CC27F3A55500E2C49D /* StoreEmployeeUseCaseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47366CB27F3A55500E2C49D /* StoreEmployeeUseCaseable.swift */; };
+		C47366CE27F3A5C200E2C49D /* StoreEmployeeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47366CD27F3A5C200E2C49D /* StoreEmployeeUseCase.swift */; };
+		C47366D027F3A69700E2C49D /* EmployeeDatabaseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47366CF27F3A69700E2C49D /* EmployeeDatabaseable.swift */; };
 		C485986427D6730A004B4742 /* EmployeeAPIConfigManagerEmptyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485986327D6730A004B4742 /* EmployeeAPIConfigManagerEmptyMock.swift */; };
 		C485986627D673E8004B4742 /* EmployeeAPIConfigManagerMalformedMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485986527D673E8004B4742 /* EmployeeAPIConfigManagerMalformedMock.swift */; };
 		C485986827D68115004B4742 /* EmployeeAPIConfigManagerNoURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485986727D68115004B4742 /* EmployeeAPIConfigManagerNoURLMock.swift */; };
@@ -103,6 +108,11 @@
 		C42DCC7127D6A0BD00F1CEDB /* EmployeeAPIDataSourceMalformedURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceMalformedURLMock.swift; sourceTree = "<group>"; };
 		C42DCC7327D6A16C00F1CEDB /* EmployeeAPIConfigManagerSuccessMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIConfigManagerSuccessMock.swift; sourceTree = "<group>"; };
 		C42DCC7527D6A3B400F1CEDB /* EmployeeAPIDataSourceSuccessMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceSuccessMock.swift; sourceTree = "<group>"; };
+		C47366C427F3A02E00E2C49D /* EmployeeDatabaseDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDatabaseDataSource.swift; sourceTree = "<group>"; };
+		C47366C827F3A40F00E2C49D /* LocalStorageDataBase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocalStorageDataBase.xcdatamodel; sourceTree = "<group>"; };
+		C47366CB27F3A55500E2C49D /* StoreEmployeeUseCaseable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreEmployeeUseCaseable.swift; sourceTree = "<group>"; };
+		C47366CD27F3A5C200E2C49D /* StoreEmployeeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreEmployeeUseCase.swift; sourceTree = "<group>"; };
+		C47366CF27F3A69700E2C49D /* EmployeeDatabaseable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDatabaseable.swift; sourceTree = "<group>"; };
 		C485986327D6730A004B4742 /* EmployeeAPIConfigManagerEmptyMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIConfigManagerEmptyMock.swift; sourceTree = "<group>"; };
 		C485986527D673E8004B4742 /* EmployeeAPIConfigManagerMalformedMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIConfigManagerMalformedMock.swift; sourceTree = "<group>"; };
 		C485986727D68115004B4742 /* EmployeeAPIConfigManagerNoURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIConfigManagerNoURLMock.swift; sourceTree = "<group>"; };
@@ -257,6 +267,32 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		C47366C327F39FEF00E2C49D /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				C47366C627F3A08800E2C49D /* CoreData */,
+				C47366C427F3A02E00E2C49D /* EmployeeDatabaseDataSource.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		C47366C627F3A08800E2C49D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C47366C727F3A40F00E2C49D /* LocalStorageDataBase.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		C47366CA27F3A52E00E2C49D /* StoreEmployees */ = {
+			isa = PBXGroup;
+			children = (
+				C47366CB27F3A55500E2C49D /* StoreEmployeeUseCaseable.swift */,
+				C47366CD27F3A5C200E2C49D /* StoreEmployeeUseCase.swift */,
+			);
+			path = StoreEmployees;
+			sourceTree = "<group>";
+		};
 		C485986227D67286004B4742 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +426,7 @@
 		C4A632AA27D3CFA300DA0504 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				C47366CA27F3A52E00E2C49D /* StoreEmployees */,
 				C4A632C727D3F98F00DA0504 /* FetchEmployees */,
 			);
 			path = UseCase;
@@ -447,6 +484,7 @@
 		C4A632B927D3F09100DA0504 /* Employee */ = {
 			isa = PBXGroup;
 			children = (
+				C47366C327F39FEF00E2C49D /* Database */,
 				C4A632BB27D3F0B000DA0504 /* Entity */,
 				C4A632BA27D3F0AA00DA0504 /* Protocol */,
 				C4A632BC27D3F0DB00DA0504 /* API */,
@@ -458,6 +496,7 @@
 			isa = PBXGroup;
 			children = (
 				C4A632BF27D3F11800DA0504 /* EmployeeDataSourceable.swift */,
+				C47366CF27F3A69700E2C49D /* EmployeeDatabaseable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -739,14 +778,18 @@
 				C4A017AD27D65FF4005C8F91 /* ConfigurationManager.swift in Sources */,
 				C4A632C027D3F11800DA0504 /* EmployeeDataSourceable.swift in Sources */,
 				C4A6329927D3CEE000DA0504 /* EmployeeListView.swift in Sources */,
+				C47366CC27F3A55500E2C49D /* StoreEmployeeUseCaseable.swift in Sources */,
 				C4A632DB27D5855F00DA0504 /* ListView.swift in Sources */,
 				C4A632B527D3EB0C00DA0504 /* EmployeeRepositable.swift in Sources */,
 				C41AA15C27D70CB900C0EDFE /* CacheAsyncImage.swift in Sources */,
 				C4A632DD27D585EE00DA0504 /* EmployeeRow.swift in Sources */,
 				C4F85B0027D6C04F002AFA5F /* EmployeeDescription.swift in Sources */,
+				C47366C927F3A40F00E2C49D /* LocalStorageDataBase.xcdatamodeld in Sources */,
 				C4A6329727D3CEE000DA0504 /* BlockApp.swift in Sources */,
 				C4A632C427D3F75900DA0504 /* Employee.swift in Sources */,
+				C47366C527F3A02E00E2C49D /* EmployeeDatabaseDataSource.swift in Sources */,
 				C4A632BE27D3F0FC00DA0504 /* EmployeeDTO.swift in Sources */,
+				C47366D027F3A69700E2C49D /* EmployeeDatabaseable.swift in Sources */,
 				C4A632FC27D6479300DA0504 /* EmployeeAPIConfigManager.swift in Sources */,
 				C4A632C227D3F1B100DA0504 /* EmployeeAPIDataSource.swift in Sources */,
 				C4A632D727D5822600DA0504 /* ErrorLabel.swift in Sources */,
@@ -757,6 +800,7 @@
 				C49F828B27D7C22900D9C734 /* LoadingView.swift in Sources */,
 				C4A632B327D3EAD000DA0504 /* EmployeeRepository.swift in Sources */,
 				C4A017B027D66567005C8F91 /* APIConfigurable.swift in Sources */,
+				C47366CE27F3A5C200E2C49D /* StoreEmployeeUseCase.swift in Sources */,
 				C4A632CF27D52D0300DA0504 /* EmployeeListViewModel.swift in Sources */,
 				C4A632D527D5807E00DA0504 /* ErrorView.swift in Sources */,
 				C4A632D127D5321D00DA0504 /* FetchEmployeesUseCase.swift in Sources */,
@@ -1054,6 +1098,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C47366C727F3A40F00E2C49D /* LocalStorageDataBase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C47366C827F3A40F00E2C49D /* LocalStorageDataBase.xcdatamodel */,
+			);
+			currentVersion = C47366C827F3A40F00E2C49D /* LocalStorageDataBase.xcdatamodel */;
+			path = LocalStorageDataBase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C4A6328B27D3CEE000DA0504 /* Project object */;
 }
