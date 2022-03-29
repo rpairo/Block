@@ -10,12 +10,14 @@ import SwiftUI
 struct EmployeeDetailView: View {
     // MARK: Properties
     @StateObject var viewModel: EmployeeDetailViewModel
-    let employee: Employee
 
     // MARK: View
     var body: some View {
-        VStack(alignment: .center, spacing: 50) {
-            CacheAsyncImage(url: URL(string: employee.largePhoto), transaction: Transaction(animation: .easeInOut)) { phase in
+        VStack(alignment: .center) {
+            CacheAsyncImage(
+                url: URL(string: viewModel.employee.largePhoto),
+                transaction: Transaction(animation: .easeInOut)
+            ) { phase in
                 switch phase {
                 case .empty:
                     placeholder
@@ -34,16 +36,19 @@ struct EmployeeDetailView: View {
             }
 
             VStack(alignment: .leading) {
-                EmployeeLabelView(title: "Name", value: employee.name)
-                EmployeeLabelView(title: "Email", value: employee.email)
+                EmployeeLabelView(title: "Name", value: viewModel.employee.name)
+                EmployeeLabelView(title: "Email", value: viewModel.employee.email)
                     .onTapGesture {
-                        viewModel.onTapEmail(email: employee.email)
+                        viewModel.onTapEmail()
                     }
-                EmployeeLabelView(title: "Phone", value: employee.phone)
+                    .sheet(isPresented: $viewModel.isShowingMailView) {
+                        MailView(result: $viewModel.emailResult)
+                    }
+                EmployeeLabelView(title: "Phone", value: viewModel.employee.phone)
                     .onTapGesture {
-                        viewModel.onTapPhone(phone: employee.phone)
+                        viewModel.onTapPhone()
                     }
-                EmployeeLabelView(title: "Team", value: employee.team)
+                EmployeeLabelView(title: "Team", value: viewModel.employee.team)
             }
         }
     }

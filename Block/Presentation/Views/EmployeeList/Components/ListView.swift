@@ -20,7 +20,9 @@ struct ListView: View {
             ForEach(groupeds.keys.sorted(), id: \.self) { team in
                 Section(team) {
                     ForEach(groupeds[team]?.sorted { $0.name < $1.name } ?? []) { employee in
-                        NavigationLink(destination: EmployeeDetailView(employee: employee)) {
+                        NavigationLink(destination: EmployeeDetailView(
+                            viewModel: EmployeeDetailViewModel(employee: employee))
+                        ) {
                             EmployeeRow(employee: employee)
                                 .padding(.vertical, 10)
                         }

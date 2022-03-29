@@ -6,14 +6,27 @@
 //
 
 import Foundation
+import MessageUI
 
 class EmployeeDetailViewModel: ObservableObject {
-    // MARK: Functionality
-    func onTapEmail(email: String) {
-        
+    // MARK: Properties
+    let employee: Employee
+    @Published var isShowingMailView = false
+    @Published var emailResult: Result<MFMailComposeResult, Error>?
+
+    // MARK: Constructor
+    init(employee: Employee) {
+        self.employee = employee
     }
 
-    func onTapPhone(phone: String) {
+    // MARK: Functionality
+    func onTapEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            self.isShowingMailView = true
+        }
+    }
+
+    func onTapPhone() {
 
     }
 }
