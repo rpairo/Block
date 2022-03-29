@@ -31,6 +31,9 @@
 		C42DCC7227D6A0BD00F1CEDB /* EmployeeAPIDataSourceMalformedURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DCC7127D6A0BD00F1CEDB /* EmployeeAPIDataSourceMalformedURLMock.swift */; };
 		C42DCC7427D6A16C00F1CEDB /* EmployeeAPIConfigManagerSuccessMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DCC7327D6A16C00F1CEDB /* EmployeeAPIConfigManagerSuccessMock.swift */; };
 		C42DCC7627D6A3B400F1CEDB /* EmployeeAPIDataSourceSuccessMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DCC7527D6A3B400F1CEDB /* EmployeeAPIDataSourceSuccessMock.swift */; };
+		C47366D227F3AE2700E2C49D /* EmployeeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47366D127F3AE2700E2C49D /* EmployeeDetailView.swift */; };
+		C47366D427F3AFB000E2C49D /* EmployeeLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47366D327F3AFB000E2C49D /* EmployeeLabelView.swift */; };
+		C47366D627F3B6D800E2C49D /* EmployeeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47366D527F3B6D800E2C49D /* EmployeeDetailViewModel.swift */; };
 		C485986427D6730A004B4742 /* EmployeeAPIConfigManagerEmptyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485986327D6730A004B4742 /* EmployeeAPIConfigManagerEmptyMock.swift */; };
 		C485986627D673E8004B4742 /* EmployeeAPIConfigManagerMalformedMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485986527D673E8004B4742 /* EmployeeAPIConfigManagerMalformedMock.swift */; };
 		C485986827D68115004B4742 /* EmployeeAPIConfigManagerNoURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485986727D68115004B4742 /* EmployeeAPIConfigManagerNoURLMock.swift */; };
@@ -103,6 +106,9 @@
 		C42DCC7127D6A0BD00F1CEDB /* EmployeeAPIDataSourceMalformedURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceMalformedURLMock.swift; sourceTree = "<group>"; };
 		C42DCC7327D6A16C00F1CEDB /* EmployeeAPIConfigManagerSuccessMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIConfigManagerSuccessMock.swift; sourceTree = "<group>"; };
 		C42DCC7527D6A3B400F1CEDB /* EmployeeAPIDataSourceSuccessMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceSuccessMock.swift; sourceTree = "<group>"; };
+		C47366D127F3AE2700E2C49D /* EmployeeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailView.swift; sourceTree = "<group>"; };
+		C47366D327F3AFB000E2C49D /* EmployeeLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeLabelView.swift; sourceTree = "<group>"; };
+		C47366D527F3B6D800E2C49D /* EmployeeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailViewModel.swift; sourceTree = "<group>"; };
 		C485986327D6730A004B4742 /* EmployeeAPIConfigManagerEmptyMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIConfigManagerEmptyMock.swift; sourceTree = "<group>"; };
 		C485986527D673E8004B4742 /* EmployeeAPIConfigManagerMalformedMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIConfigManagerMalformedMock.swift; sourceTree = "<group>"; };
 		C485986727D68115004B4742 /* EmployeeAPIConfigManagerNoURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIConfigManagerNoURLMock.swift; sourceTree = "<group>"; };
@@ -504,6 +510,7 @@
 			isa = PBXGroup;
 			children = (
 				C4A632CE27D52D0300DA0504 /* EmployeeListViewModel.swift */,
+				C47366D527F3B6D800E2C49D /* EmployeeDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -512,6 +519,7 @@
 			isa = PBXGroup;
 			children = (
 				C4A6329827D3CEE000DA0504 /* EmployeeListView.swift */,
+				C47366D127F3AE2700E2C49D /* EmployeeDetailView.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -525,6 +533,7 @@
 				C4A632DC27D585EE00DA0504 /* EmployeeRow.swift */,
 				C4F85AFF27D6C04F002AFA5F /* EmployeeDescription.swift */,
 				C49F828A27D7C22900D9C734 /* LoadingView.swift */,
+				C47366D327F3AFB000E2C49D /* EmployeeLabelView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -741,10 +750,13 @@
 				C4A6329927D3CEE000DA0504 /* EmployeeListView.swift in Sources */,
 				C4A632DB27D5855F00DA0504 /* ListView.swift in Sources */,
 				C4A632B527D3EB0C00DA0504 /* EmployeeRepositable.swift in Sources */,
+				C47366D227F3AE2700E2C49D /* EmployeeDetailView.swift in Sources */,
 				C41AA15C27D70CB900C0EDFE /* CacheAsyncImage.swift in Sources */,
 				C4A632DD27D585EE00DA0504 /* EmployeeRow.swift in Sources */,
 				C4F85B0027D6C04F002AFA5F /* EmployeeDescription.swift in Sources */,
 				C4A6329727D3CEE000DA0504 /* BlockApp.swift in Sources */,
+				C47366D427F3AFB000E2C49D /* EmployeeLabelView.swift in Sources */,
+				C47366D627F3B6D800E2C49D /* EmployeeDetailViewModel.swift in Sources */,
 				C4A632C427D3F75900DA0504 /* Employee.swift in Sources */,
 				C4A632BE27D3F0FC00DA0504 /* EmployeeDTO.swift in Sources */,
 				C4A632FC27D6479300DA0504 /* EmployeeAPIConfigManager.swift in Sources */,
