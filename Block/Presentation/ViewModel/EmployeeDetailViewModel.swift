@@ -12,7 +12,7 @@ class EmployeeDetailViewModel: ObservableObject {
     // MARK: Properties
     let employee: Employee
     @Published var isShowingMailView = false
-    @Published var emailResult: Result<MFMailComposeResult, Error>?
+    @Published var mailData = ComposeMailData(subject: "", recipients: nil, message: "", attachments: nil)
 
     // MARK: Constructor
     init(employee: Employee) {
@@ -21,12 +21,29 @@ class EmployeeDetailViewModel: ObservableObject {
 
     // MARK: Functionality
     func onTapEmail() {
-        if MFMailComposeViewController.canSendMail() {
-            self.isShowingMailView = true
+        guard MFMailComposeViewController.canSendMail() else {
+            return
         }
+
+        self.isShowingMailView = true
+        self.mailData = ComposeMailData(
+            subject: "A subject",
+            recipients: [employee.email],
+            message: "Here's a message",
+            attachments: [
+                AttachmentData(
+                    data: "Some text".data(using: .utf8)!,
+                    mimeType: "text/plain",
+                    fileName: "text.txt"
+                )
+            ]
+        )
     }
 
     func onTapPhone() {
-
+        let phone = "tel://"
+        let phoneNumberformatted = phone + employee.phone
+        guard let url = URL(string: phoneNumberformatted) else { return }
+        UIApplication.shared.open(url)
     }
 }
