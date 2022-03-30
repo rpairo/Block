@@ -10,4 +10,5 @@ import Foundation
 protocol EmployeeDatabaseable {
     // MARK: Functionality
     func store(onComplete: @escaping StoreEmployeeResult, employees: [Employee])
+    func retrieve(onComplete: @escaping RetrieveEmployeeResult)
 }

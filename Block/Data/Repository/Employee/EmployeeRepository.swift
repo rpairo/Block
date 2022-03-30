@@ -26,4 +26,8 @@ struct EmployeeRepository: EmployeeRepositable {
     func store(onComplete: @escaping StoreEmployeeResult, employees: [Employee]) {
         database.store(onComplete: onComplete, employees: employees)
     }
+
+    func retrieve(onComplete: @escaping RetrieveEmployeeResult) {
+        database.retrieve(onComplete: onComplete)
+    }
 }

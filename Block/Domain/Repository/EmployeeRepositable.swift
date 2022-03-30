@@ -11,4 +11,5 @@ protocol EmployeeRepositable {
     // MARK: Functionality
     func fetch(onComplete: @escaping FetchEmployeeResult)
     func store(onComplete: @escaping StoreEmployeeResult, employees: [Employee])
+    func retrieve(onComplete: @escaping RetrieveEmployeeResult)
 }

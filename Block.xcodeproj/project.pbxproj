@@ -65,6 +65,9 @@
 		C4A632DF27D59DB200DA0504 /* EmployeeAPIDataSource+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A632DE27D59DB200DA0504 /* EmployeeAPIDataSource+Decode.swift */; };
 		C4A632F827D63A4700DA0504 /* EmployeeAPIDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A632F727D63A4700DA0504 /* EmployeeAPIDataSourceTest.swift */; };
 		C4A632FC27D6479300DA0504 /* EmployeeAPIConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A632FB27D6479300DA0504 /* EmployeeAPIConfigManager.swift */; };
+		C4A806EB27F3E5A1005F00CB /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A806EA27F3E5A1005F00CB /* CoreDataManager.swift */; };
+		C4A806EE27F3F82D005F00CB /* RetrieveEmployeesUseCaseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A806ED27F3F82D005F00CB /* RetrieveEmployeesUseCaseable.swift */; };
+		C4A806F027F3F858005F00CB /* RetrieveEmployeesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A806EF27F3F858005F00CB /* RetrieveEmployeesUseCase.swift */; };
 		C4BEE42C27D689E000177FB9 /* EmployeeAPIConfigManagerMalformedURLMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BEE42B27D689E000177FB9 /* EmployeeAPIConfigManagerMalformedURLMock.swift */; };
 		C4BEE43027D69B4F00177FB9 /* EmployeeRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BEE42F27D69B4F00177FB9 /* EmployeeRepositoryTest.swift */; };
 		C4BEE43327D69D3700177FB9 /* EmployeeAPIDataSourceEmptyMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BEE43227D69D3700177FB9 /* EmployeeAPIDataSourceEmptyMock.swift */; };
@@ -145,6 +148,9 @@
 		C4A632E627D6389800DA0504 /* BlockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A632F727D63A4700DA0504 /* EmployeeAPIDataSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceTest.swift; sourceTree = "<group>"; };
 		C4A632FB27D6479300DA0504 /* EmployeeAPIConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIConfigManager.swift; sourceTree = "<group>"; };
+		C4A806EA27F3E5A1005F00CB /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		C4A806ED27F3F82D005F00CB /* RetrieveEmployeesUseCaseable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveEmployeesUseCaseable.swift; sourceTree = "<group>"; };
+		C4A806EF27F3F858005F00CB /* RetrieveEmployeesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveEmployeesUseCase.swift; sourceTree = "<group>"; };
 		C4BEE42B27D689E000177FB9 /* EmployeeAPIConfigManagerMalformedURLMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIConfigManagerMalformedURLMock.swift; sourceTree = "<group>"; };
 		C4BEE42F27D69B4F00177FB9 /* EmployeeRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRepositoryTest.swift; sourceTree = "<group>"; };
 		C4BEE43227D69D3700177FB9 /* EmployeeAPIDataSourceEmptyMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeAPIDataSourceEmptyMock.swift; sourceTree = "<group>"; };
@@ -280,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				C47366C727F3A40F00E2C49D /* LocalStorageDataBase.xcdatamodeld */,
+				C4A806EA27F3E5A1005F00CB /* CoreDataManager.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -426,6 +433,7 @@
 		C4A632AA27D3CFA300DA0504 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				C4A806EC27F3F807005F00CB /* RetrieveEmployees */,
 				C47366CA27F3A52E00E2C49D /* StoreEmployees */,
 				C4A632C727D3F98F00DA0504 /* FetchEmployees */,
 			);
@@ -639,6 +647,15 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		C4A806EC27F3F807005F00CB /* RetrieveEmployees */ = {
+			isa = PBXGroup;
+			children = (
+				C4A806ED27F3F82D005F00CB /* RetrieveEmployeesUseCaseable.swift */,
+				C4A806EF27F3F858005F00CB /* RetrieveEmployeesUseCase.swift */,
+			);
+			path = RetrieveEmployees;
+			sourceTree = "<group>";
+		};
 		C4BEE43127D69D0600177FB9 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
@@ -786,6 +803,7 @@
 				C4F85B0027D6C04F002AFA5F /* EmployeeDescription.swift in Sources */,
 				C47366C927F3A40F00E2C49D /* LocalStorageDataBase.xcdatamodeld in Sources */,
 				C4A6329727D3CEE000DA0504 /* BlockApp.swift in Sources */,
+				C4A806EB27F3E5A1005F00CB /* CoreDataManager.swift in Sources */,
 				C4A632C427D3F75900DA0504 /* Employee.swift in Sources */,
 				C47366C527F3A02E00E2C49D /* EmployeeDatabaseDataSource.swift in Sources */,
 				C4A632BE27D3F0FC00DA0504 /* EmployeeDTO.swift in Sources */,
@@ -801,10 +819,12 @@
 				C4A632B327D3EAD000DA0504 /* EmployeeRepository.swift in Sources */,
 				C4A017B027D66567005C8F91 /* APIConfigurable.swift in Sources */,
 				C47366CE27F3A5C200E2C49D /* StoreEmployeeUseCase.swift in Sources */,
+				C4A806F027F3F858005F00CB /* RetrieveEmployeesUseCase.swift in Sources */,
 				C4A632CF27D52D0300DA0504 /* EmployeeListViewModel.swift in Sources */,
 				C4A632D527D5807E00DA0504 /* ErrorView.swift in Sources */,
 				C4A632D127D5321D00DA0504 /* FetchEmployeesUseCase.swift in Sources */,
 				C4A017B327D665A5005C8F91 /* EmployeeAPIConfiguration.swift in Sources */,
+				C4A806EE27F3F82D005F00CB /* RetrieveEmployeesUseCaseable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -980,7 +1000,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W2HFS492D7;
+				DEVELOPMENT_TEAM = YU4YN6PRR8;
 				ENABLE_PREVIEWS = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -994,7 +1014,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rpairo.Block;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rpairo.BlockChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1009,7 +1029,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W2HFS492D7;
+				DEVELOPMENT_TEAM = YU4YN6PRR8;
 				ENABLE_PREVIEWS = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -1023,7 +1043,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rpairo.Block;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rpairo.BlockChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

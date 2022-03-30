@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E230" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="EmployeeEntity" representedClassName="EmployeeEntity" syncable="YES" codeGenerationType="class">
-        <attribute name="biography" optional="YES" attributeType="String"/>
-        <attribute name="email" optional="YES" attributeType="String"/>
-        <attribute name="employeeType" optional="YES" attributeType="String"/>
-        <attribute name="id" optional="YES" attributeType="String"/>
-        <attribute name="largePhoto" optional="YES" attributeType="String"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="phone" optional="YES" attributeType="String"/>
-        <attribute name="smallPhoto" optional="YES" attributeType="String"/>
-        <attribute name="team" optional="YES" attributeType="String"/>
+    <entity name="EmployeeEntity" representedClassName=".EmployeeEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="biography" attributeType="String"/>
+        <attribute name="email" attributeType="String"/>
+        <attribute name="employeeType" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="largePhoto" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="phone" attributeType="String"/>
+        <attribute name="smallPhoto" attributeType="String"/>
+        <attribute name="team" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="EmployeeEntity" positionX="-63" positionY="-18" width="128" height="14"/>
+        <element name="EmployeeEntity" positionX="-63" positionY="-18" width="128" height="164"/>
     </elements>
 </model>

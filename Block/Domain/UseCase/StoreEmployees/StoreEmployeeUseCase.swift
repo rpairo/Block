@@ -11,6 +11,11 @@ struct StoreEmployeeUseCase: StoreEmployeeUseCaseable {
     // MARK: Properties
     private let repository: EmployeeRepositable
 
+    // MARK: Constructor
+    init(repository: EmployeeRepositable) {
+        self.repository = repository
+    }
+
     // MARK: Functionality
     func execute(onComplete: @escaping StoreEmployeeResult, employees: [Employee]) {
         repository.store(onComplete: onComplete, employees: employees)
